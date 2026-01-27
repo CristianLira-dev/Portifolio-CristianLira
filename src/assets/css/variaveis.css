@@ -1,0 +1,121 @@
+:root {
+  --cor-branco: #fafafa;
+  --cor-preto: #000000;
+  --cor-cinza: #c2c7d2;
+
+  --cor-escuro-1: #0a0b0e;
+  --cor-escuro-2: #131519;
+  --cor-escuro-3: #1c1f25;
+  --cor-escuro-4: #252931;
+  --cor-escuro-5: #454649;
+  --cor-escuro-3-transparente: #1c1f2595;
+
+  --cor-vinho-escuro: #470a24;
+  --cor-vinho-medio:  #851e49;
+  --cor-vinho-claro:  #b85c83;
+
+--cor-bege: #f4f2e6;
+
+  --cor-verde: #00dc82;
+  --cor-verde-escuro-1: #071811;
+  --cor-verde-escuro-2: #123627;
+  --cor-verde-escuro-3: #007646;
+  --cor-verde-claro: #aeffde;
+
+  --cor-vinho-principal: #8B0000; 
+  --cor-vinho-escuro:    #600000;
+
+  --cor-dourado-fosco:   #D4AF37;
+  --cor-dourado-claro:   #F4C430;
+
+  --cor-creme-fundo:     #F9F8F5; 
+
+  --cor-chumbo-texto:    #2C2C2C;
+  --cor-carvao-escuro:   #1C1C1C;
+  --cor-cinza-borda:     #E0E0E0;
+
+  --cor-vermelho: #c90613;
+  --cor-vermelho-claro: #ffe3e5;
+  --cor-vermelho-escuro: #331218;
+  --cor-vermelho-escuro-2: #4a1821;
+
+  --cor-laranja: #ffb12b;
+  --cor-laranja-escuro: #36170c;
+  --cor-laranja-forte: #ff662e;
+
+  --cor-azul: #a1a6ff;
+  --cor-azul-forte: #050720;
+  --cor-azul-claro: #33a0ff;
+  --cor-azul-escuro: #1d2637;
+
+  --cor-azul-deep-space: #020412;
+  --cor-azul-accent: #00d4ff;
+  --cor-azul-muted: #5c6da3; 
+  --cor-azul-glass: rgba(51, 160, 255, 0.1);
+
+  --gradiente-skyline: linear-gradient(0deg, #050720 0%, #1d2637 100%);
+
+  --cor-amarelo: #ffc42e;
+  --cor-amarelo-escuro: #342706;
+
+  --cor-roxo: #6200ea;
+  --cor-roxo-claro: #b077ff;
+  --cor-roxo-escuro: #251b44;
+
+  --cor-musgo: #a9e336;
+  --cor-musgo-escuro: #212c0b;
+
+  --cor-rosa: #cd6799;
+  --cor-rosa-escuro: #3f1c2d;
+
+  --cor-rosado: #cf3659;
+  --cor-rosado-escuro: #470c1a;
+
+    --postit-amarelo: #fff9c4; 
+  --postit-verde: #e8f5e9;   
+  --postit-rose: #ffebee;    
+  --sombra-postit: 2px 4px 8px rgba(0, 0, 0, 0.15);
+
+  --ease-fluid: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --f0: 10px;
+  --f1: 15px;
+  --f2: 18px;
+  --f3: 25px;
+  --f4: 30px;
+  --f5: 35px;
+  --f6: 40px;
+  --f7: 45px;
+  --f8: 50px;
+  --f9: 55px;
+  --f10: 60px;
+  --f11: 70px;
+  --f12: 80px;
+  --f13: 90px;
+  --f14: 100px;
+
+  --semibold: 'figtree-semibold';
+  --light: 'figtree-light';
+  --bold: 'figtree-bold';
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --f0: 9px;
+    --f1: 12px;
+    --f2: 14px;
+    --f3: 20px;
+    --f4: 24px;
+    --f5: 28px;
+    --f6: 32px;
+    --f7: 36px;
+    --f8: 40px;
+    --f9: 44px;
+    --f10: 48px;
+    --f11: 52px;
+    --f12: 56px;
+    --f13: 60px;
+    --f14: 64px;
+  }
+}

@@ -1,0 +1,36 @@
+@import "../../assets/css/index.css";
+
+.sectionHero {
+  position: relative;
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cor-azul-forte);
+}
+
+.splineWrapper {
+  position: absolute;
+  width: 115%; /* O tamanho extra que você colocou */
+  height: 115%;
+  /* Centralização matemática: (TamanhoExtra / 2) * -1 */
+  top: -5%;  
+  left: -5%; 
+  z-index: 1;
+}
+
+.splineWrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.content {
+  position: relative;
+  z-index: 2; /* Fica na frente */
+  text-align: center;
+  color: var(--cor-azul); /* Use suas novas variáveis! */
+  pointer-events: none; /* Permite interagir com o 3D através do texto se necessário */
+}
