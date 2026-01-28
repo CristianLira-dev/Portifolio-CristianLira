@@ -3,7 +3,7 @@
 .sectionHero {
   position: relative;
   width: 100vw;
-  height: 100dvh;
+  min-height: 100dvh;
   overflow: hidden; 
   display: flex;
   align-items: center;
@@ -13,24 +13,103 @@
 
 .splineWrapper {
   position: absolute;
-  width: 115%; /* O tamanho extra que você colocou */
+  width: 115%;
   height: 115%;
-  /* Centralização matemática: (TamanhoExtra / 2) * -1 */
   top: -5%;  
   left: -5%; 
   z-index: 1;
+  pointer-events: none;
 }
 
 .splineWrapper canvas {
   width: 100% !important;
   height: 100% !important;
   display: block;
+  pointer-events: none; 
 }
 
 .content {
   position: relative;
-  z-index: 2; /* Fica na frente */
+  z-index: 10; /* Fica na frente */
   text-align: center;
   color: var(--cor-azul); /* Use suas novas variáveis! */
-  pointer-events: none; /* Permite interagir com o 3D através do texto se necessário */
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.content p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.icon{
+  color: var(--cor-branco);
+  border-radius: 12px;
+  border: solid 1px var(--cor-azul-glass);
+  font-size: var(--f3);
+  padding: 8px;
+  margin-top: 1rem;
+}
+
+.iconLink{
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 14px;
+  padding: 6px;
+  transition: transform 350ms cubic-bezier(.2,.9,.2,1), box-shadow 300ms, background 400ms;
+}
+
+.iconLink::before{
+  content: "";
+  position: absolute;
+  border-radius: 18px;
+  background: conic-gradient(from 0deg, rgba(0,210,255,0.22), rgba(138,43,226,0.18), rgba(0,210,255,0.22));
+  filter: blur(8px) saturate(120%);
+  opacity: 0;
+  transform: scale(.9) rotate(0deg);
+  transition: opacity 300ms, transform 600ms cubic-bezier(.2,.9,.2,1);
+  pointer-events: none;
+}
+
+
+.icon{
+  transition: transform 450ms cubic-bezier(.2,.9,.2,1), color 300ms, filter 300ms;
+  will-change: transform, filter;
+  display: inline-block;
+}
+
+.iconLink:hover{ 
+  transform: translateY(-6px) rotate(-4deg) scale(1.04);
+}
+
+.iconLink:hover::before{
+  opacity: 1;
+  transform: scale(1) rotate(10deg);
+}
+
+.iconLink:hover .icon{
+  transform: rotate(5deg) scale(1.14);
+  color: var(--cor-azul-claro); /* cor neon principal */
+  filter: drop-shadow(0 6px 12px rgba(0,210,255,0.18)) saturate(140%);
+}
+
+
+/* subtle floating animation when not hovered */
+@keyframes floaty {
+  0%{ transform: translateY(0) }
+  50%{ transform: translateY(-4px) }
+  100%{ transform: translateY(0) }
+}
+.iconLink{ animation: floaty 6s ease-in-out infinite; }
+
+ul{
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }

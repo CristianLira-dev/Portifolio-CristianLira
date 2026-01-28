@@ -1,0 +1,11 @@
+@import "../../assets/css/index.css";
+
+.sectionSobre {
+  width: 100vw;
+  min-height: 100dvh;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cor-azul-fundo);
+}
