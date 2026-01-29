@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--cor-azul-forte);
+  background-color: var(--cor-azul-fundo);
 }
 
 .splineWrapper {
@@ -19,13 +19,22 @@
   left: -5%; 
   z-index: 1;
   pointer-events: none;
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .splineWrapper canvas {
   width: 100% !important;
   height: 100% !important;
   display: block;
-  pointer-events: none; 
+  pointer-events: none;
+    touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .content {
@@ -36,14 +45,36 @@
 }
 
 .content h1 {
-  font-size: 3rem;
+  font-size: var(--f7);
+  font-family: var(--bold);
+  color: var(--cor-branco);
   margin: 0;
 }
 
 .content p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
+  font-size: var(--f6);
+  font-family: var(--semibold);
+  color: var(--cor-branco);
+  margin: 0;
+  margin-top: 0.5rem;
 }
+
+.content h2 {
+  font-size: var(--f2);
+  font-family: var(--light);
+  color: var(--cor-branco);
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+.gradientText {
+  background: linear-gradient(90deg, var(--cor-azul-claro), var(--cor-rosa), var(--cor-roxo));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 .icon{
   color: var(--cor-branco);
   border-radius: 12px;
@@ -66,7 +97,7 @@
   content: "";
   position: absolute;
   border-radius: 18px;
-  background: conic-gradient(from 0deg, rgba(0,210,255,0.22), rgba(138,43,226,0.18), rgba(0,210,255,0.22));
+  background: conic-gradient(from 0deg, rgba(2, 117, 143, 0.22), rgba(138,43,226,0.18), rgba(0,210,255,0.22));
   filter: blur(8px) saturate(120%);
   opacity: 0;
   transform: scale(.9) rotate(0deg);
@@ -93,7 +124,7 @@
 .iconLink:hover .icon{
   transform: rotate(5deg) scale(1.14);
   color: var(--cor-azul-claro); /* cor neon principal */
-  filter: drop-shadow(0 6px 12px rgba(0,210,255,0.18)) saturate(140%);
+  filter: drop-shadow(0 6px 12px var(--cor-azul-claro)) saturate(100%);
 }
 
 
@@ -112,4 +143,30 @@ ul{
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.buttonWrapper {
+  margin-top: 2rem;
+}
+
+.buttonWrapper a {
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: solid 1px var(--cor-branco);
+  color: var(--cor-branco);
+  font-family: (--semibold);
+  font-size: var(--f1);
+  transition: all 0.3s ease;
+}
+
+.buttonWrapper a:hover {
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  background-color: var(--cor-branco);
+  color: var(--cor-preto);
+  
 }

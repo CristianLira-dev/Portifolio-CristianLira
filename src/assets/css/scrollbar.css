@@ -1,7 +1,7 @@
 html,
 body {
   /* Padrão Firefox */
-  scrollbar-color: var(--cor-azul-claro) var(--cor-azul-forte);
+  scrollbar-color: var(--cor-branco) var(--cor-preto);
   scrollbar-width: thin;
   scroll-behavior: smooth;
 }
@@ -14,12 +14,12 @@ body {
 
 /* O fundo (trilho) por onde a barra corre */
 ::-webkit-scrollbar-track {
-  background: var(--cor-azul-forte);
+  background: var(--cor-preto);
 }
 
 /* A "pega" da barra (o polegar) */
 ::-webkit-scrollbar-thumb {
-  background: var(--cor-azul-claro);
+  background: var(--cor-branco);
   border-radius: 10px;
   /* Nota: Transições em scrollbars nem sempre são renderizadas por todos os browsers, mas não quebram o código */
   transition: background 0.3s;
@@ -27,5 +27,5 @@ body {
 
 /* Estado de Hover na barra */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--cor-azul-claro);
+  background: var(--cor-branco);
 }
