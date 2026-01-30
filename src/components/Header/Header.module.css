@@ -1,0 +1,143 @@
+@import "../../assets/css/index.css";
+
+.SectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 360px);
+  max-width: 1920px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 60px;
+  border-radius: 100px;
+  padding: 0 15px 0 35px;
+  background-color: var(--cor-escuro-3-transparente);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.Logo {
+  font-family: var(--semibold);
+  font-size: var(--f4);
+  color: var(--cor-branco);
+  text-decoration: none;
+}
+
+.Nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.Nav ul li a {
+    font-family: var(--light);
+    font-size: var(--f1);
+    color: var(--cor-branco);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.Nav ul li a:hover {
+    color: var(--cor-rosa);
+}
+
+.Language button {
+    border: solid 1px var(--cor-branco);
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.LanguageContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.SelectBtn {
+    background: #222; /* Fundo escuro */
+    color: white;
+    border: 1px solid #444;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    min-width: 150px;
+}
+
+.Arrow {
+    font-size: var(--f2);
+    transition: transform 0.3s;
+    margin-left: auto;
+}
+
+.Arrow.Open {
+    transform: rotate(180deg); /* O "V" vira para cima quando abre */
+}
+
+/* O Menu Pop-up */
+.Dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 110%; /* Aparece logo abaixo do botão */
+    left: 0;
+    width: 100%;
+    background: #1a1a1a; /* Fundo mais escuro para o menu */
+    border: 1px solid #333;
+    border-radius: 8px;
+    list-style: none;
+    padding: 10px;
+    z-index: 100;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.Dropdown li {
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.Dropdown li:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilo comum dos botões dentro do menu */
+.Dropdown button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: left;
+    color: white;
+}
+
+/* O selecionado fica com fundo MAIS CLARO */
+.Selected {
+    background: #444; 
+    font-weight: bold;
+}
+
+/* Os não selecionados ficam com fundo MAIS ESCURO */
+.NotSelected {
+    background: #222;
+}
+
+.Dropdown button:hover {
+    background: #007bff; /* Cor de destaque ao passar o mouse */
+}

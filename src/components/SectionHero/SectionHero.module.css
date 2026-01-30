@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--cor-azul-fundo);
+  background-color: var(--cor-preto);
 }
 
 .splineWrapper {
@@ -124,7 +124,7 @@
 .iconLink:hover .icon{
   transform: rotate(5deg) scale(1.14);
   color: var(--cor-azul-claro); /* cor neon principal */
-  filter: drop-shadow(0 6px 12px var(--cor-azul-claro)) saturate(100%);
+  filter: drop-shadow(0 6px 12px var(--cor-azul-claro)) saturate(50%);
 }
 
 
