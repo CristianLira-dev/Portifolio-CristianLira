@@ -14,14 +14,9 @@ function Header() {
     const { t, i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
 
-    const abrirModal = () => {
-        // Lógica para abrir o modal de seleção de idioma
-        setLanguage(prev => (prev === 'brasil' ? 'eua' : 'brasil'));
-    }
-
 const languages = [
-  { code: "pt", name: "Português", flag: imgPT },
-  { code: "en", name: "English", flag: imgEN },
+  { code: "pt-BR", name: "Português", flag: imgPT },
+  { code: "en-US", name: "English", flag: imgEN },
   { code: "es", name: "Español", flag: imgES },
 ];
 
@@ -56,10 +51,7 @@ const languages = [
         </nav>
         <div className={styles.LanguageContainer}>
           {/* Botão Principal do Select */}
-          <button
-            className={styles.SelectBtn}
-            onClick={() => setIsOpen(!isOpen)}
-          >
+          <button className={styles.SelectBtn} onClick={() => setIsOpen(!isOpen)}>
             <img src={currentLanguage.flag} alt="" width="20" />
 
             <span>{currentLanguage.name}</span>
@@ -69,7 +61,6 @@ const languages = [
             </i>
           </button>
 
-          {/* Pop-up (Menu Dropdown) */}
           {isOpen && (
             <ul className={styles.Dropdown}>
               {languages.map((lang) => (

@@ -6,5 +6,11 @@
     "projects": "Proyectos",
     "contact": "Contacto",
     "language_name": "Español"
+  },
+  "hero": {
+    "title": "Construyendo el futuro de la web con",
+    "style_text": "código y diseño.",
+    "subtitle": "Desarrollador Front-End | UI/UX Designer",
+    "button_projects": "Explorar Proyectos"
   }
 }

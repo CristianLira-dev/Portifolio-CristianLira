@@ -1,0 +1,158 @@
+{
+  "categories": [
+    {
+      "id": "core-languages",
+      "title": "Core & Linguagens",
+      "description": "Fundamentos sólidos em desenvolvimento web",
+      "gradient": "linear-gradient(80deg, #1a1a1a 70%, #1e3a5f)",
+      "iconColor": "#60a5fa",
+      "size": "half",
+      "skills": [
+        {
+          "name": "HTML5",
+          "icon": null
+        },
+        {
+          "name": "CSS3",
+          "icon": null
+        },
+        {
+          "name": "JavaScript",
+          "icon": null
+        },
+        {
+          "name": "JSON",
+          "icon": null
+        }
+      ]
+    },
+    {
+      "id": "frameworks",
+      "title": "Front-End Frameworks & Libs",
+      "description": "Desenvolvimento de aplicações modernas e escaláveis",
+      "gradient": "linear-gradient(70deg, #1a1a1a 70%, #2d4a3e)",
+      "iconColor": "#6ee7b7",
+      "size": "half",
+      "skills": [
+        {
+          "name": "React.js",
+          "icon": null
+        },
+        {
+          "name": "Vue.js",
+          "icon": null
+        },
+        {
+          "name": "Nuxt.js",
+          "icon": null
+        }
+      ]
+    },
+    {
+      "id": "styling-ui",
+      "title": "Estilização & UI",
+      "description": "Criação de interfaces modernas e responsivas",
+      "gradient": "linear-gradient(50deg, #1a1a1a 70%, #4a1d4a)",
+      "iconColor": "#c084fc",
+      "size": "half",
+      "skills": [
+        {
+          "name": "TailwindCSS",
+          "icon": null
+        },
+        {
+          "name": "Bootstrap",
+          "icon": null
+        },
+        {
+          "name": "SASS",
+          "icon": null
+        },
+        {
+          "name": "Figma",
+          "icon": null
+        }
+      ]
+    },
+    {
+      "id": "state-management",
+      "title": "Gerenciamento de Estado",
+      "description": "Controle eficiente de dados complexos",
+      "gradient": "linear-gradient(40deg, #1a1a1a 70%, #4a2d1e)",
+      "iconColor": "#fb923c",
+      "size": "half",
+      "skills": [
+        {
+          "name": "Pinia (Vue/Nuxt)",
+          "icon": null
+        },
+        {
+          "name": "Context API (React)",
+          "icon": null
+        }
+      ]
+    },
+    {
+      "id": "creative-animation",
+      "title": "Creative Coding & Animação",
+      "description": "Experiências visuais imersivas e interativas",
+      "gradient": "linear-gradient(60deg, #1a1a1a 60%, #4a1d2d)",
+      "iconColor": "#f472b6",
+      "size": "full",
+      "skills": [
+        {
+          "name": "Three.js (3D)",
+          "icon": null
+        },
+        {
+          "name": "GSAP",
+          "icon": null
+        }
+      ]
+    },
+    {
+      "id": "backend-integration",
+      "title": "Back-End, Dados & Integração",
+      "description": "Conexão entre front-end e serviços externos",
+      "gradient": "linear-gradient(50deg, #1a1a1a 70%, #4a2d3e)",
+      "iconColor": "#f9a8d4",
+      "size": "full",
+      "skills": [
+        {
+          "name": "MySQL",
+          "icon": null
+        },
+        {
+          "name": "API REST",
+          "icon": null
+        },
+        {
+          "name": "PHP",
+          "icon": null
+        },
+        {
+          "name": "Axios",
+          "icon": null
+        }
+      ]
+    },
+    {
+      "id": "tools-devops",
+      "title": "Ferramentas & DevOps",
+      "description": "Otimização de fluxo de trabalho e deploy",
+      "gradient": "linear-gradient(80deg, #1a1a1a 70%, #1e3a5f)",
+      "iconColor": "#3b82f6",
+      "size": "half",
+      "skills": [
+        {
+          "name": "Git (Versionamento)",
+          "icon": null
+        },
+        {
+          "name": "Vite (Build Tool)",
+          "icon": null
+        }
+      ]
+    }
+  ]
+}

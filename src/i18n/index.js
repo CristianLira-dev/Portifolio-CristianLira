@@ -15,7 +15,7 @@ i18n
       en: { translation: enTranslation },
       es: { translation: esTranslation },
     },
-    fallbackLng: "en", // Se não detectar nada, usa PT
+    fallbackLng: "en", // Se não detectar nada, usa inglês
     interpolation: {
       escapeValue: false,
     },

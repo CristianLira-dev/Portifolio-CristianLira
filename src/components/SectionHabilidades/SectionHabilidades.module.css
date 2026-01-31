@@ -1,0 +1,573 @@
+@import "../../assets/css/index.css";
+
+/* ============================================
+   SEÇÃO HABILIDADES - CONTAINER PRINCIPAL
+   ============================================ */
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #0a0a0a 0%, #121212 100%);
+}
+
+/* ============================================
+   DIVISOR DECORATIVO
+   ============================================ */
+.divisor {
+    width: calc(100% + 50px);
+    height: 150px;
+    background-color: #0f0f0f;
+    position: absolute;
+    bottom: -65px;
+    left: -25px;
+    transform: rotate(-4deg);
+    z-index: 1;
+}
+
+/* ============================================
+   TÍTULO E DESCRIÇÃO
+   ============================================ */
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 40px 80px;
+    gap: 20px;
+    background: linear-gradient(0deg, #121212, #1a1a1a);
+}
+
+.titulo h2 {
+    font-family: var(--bold);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1;
+    width: 100%;
+    max-width: 800px;
+}
+
+.titulo p {
+    font-family: var(--light);
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    color: #9ca3af;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 500px;
+}   
+
+.destaque {
+    font-family: var(--semibold);
+    color: var(--cor-azul-claro);
+}
+
+/* ============================================
+   TABS DE NAVEGAÇÃO
+   ============================================ */
+.tabs {
+    display: flex;
+    gap: 20px;
+    margin: 40px 0;
+    padding: 0 80px;
+}
+
+.tab {
+    padding: 12px 32px;
+    font-family: var(--semibold);
+    font-size: 1rem;
+    color: var(--cor-escuro-5);
+    background-color: transparent;
+    border: 2px solid var(--cor-escuro-5);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    border-color: var(--cor-azul-claro);
+    color: var(--cor-branco);
+}
+
+.tabActive {
+    background: linear-gradient(135deg, var(--cor-azul-claro), var(--cor-azul-escuro));
+    border-color: var(--cor-azul-claro);
+    color: #ffffff;
+}
+
+/* ============================================
+   BENTO GRID - LAYOUT RESPONSIVO
+   ============================================ */
+.bentoGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 80%;
+    padding: 0 80px 80px 80px;
+    margin: 0 0 100px 0;
+}
+
+.card {
+    border-radius: 16px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Tamanhos dos cards */
+.half {
+    grid-column: span 6;
+}
+
+.full {
+    grid-column: span 12;
+}
+
+/* Layout específico para 7 cards de Hard Skills */
+.card:nth-child(1),
+.card:nth-child(2) {
+    grid-column: span 6; /* Primeira linha: 2 cards */
+}
+
+.card:nth-child(3),
+.card:nth-child(4) {
+    grid-column: span 6; /* Segunda linha: 2 cards */
+}
+
+.card:nth-child(5) {
+    grid-column: span 12; /* Terceira linha: 1 card full */
+}
+
+.card:nth-child(6) {
+    grid-column: span 12; /* Quarta linha: 1 card full */
+}
+
+.card:nth-child(7) {
+    grid-column: span 12; /* Quinta linha: 1 card full (Tools) */
+}
+
+.softSkillCard {
+    grid-column: span 4;
+}
+
+/* ============================================
+   ÍCONE E PLACEHOLDER
+   ============================================ */
+.cardIcon {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    opacity: 0.3;
+}
+
+.iconPlaceholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================
+   CONTEÚDO DO CARD
+   ============================================ */
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 2;
+}
+
+.cardContent h3 {
+    font-family: var(--semibold);
+    font-size: 1.5rem;
+    color: #ffffff;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.cardDescription {
+    font-family: var(--light);
+    font-size: 0.95rem;
+    color: #9ca3af;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ============================================
+   LISTA DE SKILLS - GRID DE MINI CARDS
+   ============================================ */
+.skillsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.skillItem {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================
+   MINI CARD DE SKILL (ESTILO DA IMAGEM)
+   ============================================ */
+.skillHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 15px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-height: 120px;
+}
+
+.skillHeader:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Ícone da skill individual */
+.skillIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+/* Nome da skill */
+.skillHeader .skillName {
+    font-family: var(--semibold);
+    font-size: var(--f1);
+    color: var(--cor-branco);
+    text-align: center;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* ============================================
+   CORES ESPECÍFICAS DAS TECNOLOGIAS
+   ============================================ */
+/* HTML5 */
+.skillIcon.html5 {
+    color: #E34F26;
+}
+
+/* CSS3 */
+.skillIcon.css3 {
+    color: #1572B6;
+}
+
+/* JavaScript */
+.skillIcon.javascript {
+    color: #F7DF1E;
+}
+
+/* PHP */
+.skillIcon.php {
+    color: #777BB4;
+}
+
+/* JSON */
+.skillIcon.json {
+    color: #ccae00;
+}
+/* React */
+.skillIcon.react {
+    color: #61DAFB;
+}
+
+/* Vue */
+.skillIcon.vue {
+    color: #42B883;
+}
+
+/* Nuxt */
+.skillIcon.nuxt {
+    color: #00DC82;
+}
+
+/* TailwindCSS */
+.skillIcon.tailwind {
+    color: #06B6D4;
+}
+
+/* Bootstrap */
+.skillIcon.bootstrap {
+    color: #7952B3;
+}
+
+/* SASS */
+.skillIcon.sass {
+    color: #CC6699;
+}
+
+/* Figma */
+.skillIcon.figma {
+    background: linear-gradient(135deg, #F24E1E 0%, #A259FF 50%, #1ABCFE 100%);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    display: inline-block; 
+}
+
+/* Pinia */
+.skillIcon.pinia {
+    color: #FFD859;
+}
+
+/* Context API */
+.skillIcon.context {
+    color: #61DAFB;
+}
+
+.skillIcon.threejs {
+    background: #FFFFFF; /* Fallback para navegadores antigos */
+    background: linear-gradient(135deg, #FFFFFF 0%, #808080 100%);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    display: inline-block; 
+}
+/* GSAP */
+.skillIcon.gsap {
+    color: #88CE02;
+}
+
+/* MySQL */
+.skillIcon.mysql {
+    color: #4479A1;
+}
+
+/* API REST */
+.skillIcon.api {
+    color: #009688;
+}
+
+/* Axios */
+.skillIcon.axios {
+    color: #5A29E4;
+}
+
+/* Git */
+.skillIcon.git {
+    color: #F05032;
+}
+
+/* Vite */
+.skillIcon.vite {
+    background: linear-gradient(135deg, #646CFF, #BD34FE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ============================================
+   RESPONSIVIDADE - TABLET
+   ============================================ */
+@media screen and (max-width: 1024px) {
+    .bentoGrid {
+        padding: 0 40px 60px 40px;
+        gap: 16px;
+        max-width: 90%;
+    }
+
+    .titulo {
+        padding: 40px 40px;
+    }
+
+    .tabs {
+        padding: 0 40px;
+    }
+
+    .half,
+    .softSkillCard {
+        grid-column: span 6;
+    }
+
+    .skillsList {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE - MOBILE
+   ============================================ */
+@media screen and (max-width: 768px) {
+    .habilidades {
+        padding: 60px 0;
+    }
+
+    .divisor {
+        height: 100px;
+        bottom: -45px;
+    }
+
+    .titulo {
+        padding: 30px 20px;
+        gap: 16px;
+    }
+
+    .titulo h2 {
+        font-size: 2rem;
+    }
+
+    .titulo p {
+        font-size: 1rem;
+    }
+
+    .tabs {
+        padding: 0 20px;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tab {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+
+    .bentoGrid {
+        grid-template-columns: 1fr;
+        padding: 0 20px 60px 20px;
+        gap: 16px;
+        max-width: 100%;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+    .half,
+    .full,
+    .softSkillCard {
+        grid-column: span 1;
+    }
+
+    .cardIcon {
+        top: 15px;
+        right: 20px;
+        font-size: 2rem;
+    }
+
+    .iconPlaceholder {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cardContent h3 {
+        font-size: 1.25rem;
+        max-width: 70%;
+    }
+
+    .cardDescription {
+        font-size: 0.9rem;
+    }
+
+    .skillsList {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .skillHeader {
+        padding: 15px 10px;
+        min-height: 100px;
+    }
+
+    .skillIcon {
+        font-size: 2rem;
+    }
+
+    .skillHeader .skillName {
+        font-size: 0.8rem;
+    }
+
+    .skillLevel {
+        font-size: 0.8rem;
+        padding: 5px 14px;
+    }
+}
+
+/* ============================================
+   ANIMAÇÕES E TRANSIÇÕES
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+.card:nth-child(7) { animation-delay: 0.7s; }
+.card:nth-child(8) { animation-delay: 0.8s; }
+
+/* ============================================
+   ÍCONE PRINCIPAL DO CARD (CANTO SUPERIOR)
+   ============================================ */
+.cardIcon svg {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Ícone de soft skill */
+.softSkillCard .cardIcon svg {
+    width: 50px;
+    height: 50px;
+}
+
+/* Animação de hover nos ícones */
+.card:hover .cardIcon svg {
+    transform: scale(1.1) rotate(5deg);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive - Mobile - Ícones */
+@media screen and (max-width: 768px) {
+    .cardIcon svg {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .softSkillCard .cardIcon svg {
+        width: 50px;
+        height: 50px;
+    }
+}

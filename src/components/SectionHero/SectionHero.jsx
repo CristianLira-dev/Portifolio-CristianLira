@@ -2,11 +2,13 @@ import { useEffect, useRef } from "react";
 import { Application } from "@splinetool/runtime";
 import styles from "./SectionHero.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub,faLinkedin,faWhatsapp,} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin, faWhatsapp, } from "@fortawesome/free-brands-svg-icons";
+import { useTranslation } from "react-i18next";
 
 function SectionHero() {
   const canvasRef = useRef(null);
   const splineInstance = useRef(null);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -67,11 +69,11 @@ function SectionHero() {
       <div className={styles.content}>
         <h1>Cristian Lira</h1>
         <p>
-          Construindo o futuro da web com{" "}
-          <span className={styles.gradientText}>código e design.</span>
+          {t("hero.title")}{" "}
+          <span className={styles.gradientText}>{t("hero.style_text")}</span>
         </p>
         <h2>
-          Desenvolvedor Front-End | UI/UX Designer
+        {t("hero.subtitle")}
         </h2>
         <nav aria-label="Redes Sociais">
           <ul className={styles.iconList}>
@@ -102,9 +104,7 @@ function SectionHero() {
                 className={styles.iconLink}
                 href="https://wa.me/+5513996873783"
                 target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-              >
+                rel="noopener noreferrer" aria-label="WhatsApp" >
                 <FontAwesomeIcon className={styles.icon} icon={faWhatsapp} />
               </a>
             </li>
@@ -117,7 +117,7 @@ function SectionHero() {
             aria-label="Explorar Projetos"
             rel="noopener noreferrer"
           >
-            Explorar Projetos
+           {t("hero.button_projects")}
           </a>
         </div>
       </div>

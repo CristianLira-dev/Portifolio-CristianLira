@@ -12,7 +12,7 @@
   transform: translateX(-50%);
   height: 60px;
   border-radius: 100px;
-  padding: 0 15px 0 35px;
+  padding: 0 35px;
   background-color: var(--cor-escuro-3-transparente);
   backdrop-filter: blur(10px);
   z-index: 100;
@@ -66,12 +66,12 @@
     background: #222; /* Fundo escuro */
     color: white;
     border: 1px solid #444;
-    padding: 8px 16px;
+    padding: 8px 10px;
     border-radius: 8px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     transition: 0.3s;
     min-width: 150px;
 }
