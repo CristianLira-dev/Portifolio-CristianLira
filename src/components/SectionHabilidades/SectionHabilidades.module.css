@@ -15,20 +15,6 @@
 }
 
 /* ============================================
-   DIVISOR DECORATIVO
-   ============================================ */
-.divisor {
-    width: calc(100% + 50px);
-    height: 150px;
-    background-color: #0f0f0f;
-    position: absolute;
-    bottom: -65px;
-    left: -25px;
-    transform: rotate(-4deg);
-    z-index: 1;
-}
-
-/* ============================================
    TÍTULO E DESCRIÇÃO
    ============================================ */
 .titulo {
@@ -150,11 +136,11 @@
 }
 
 .card:nth-child(5) {
-    grid-column: span 12; /* Terceira linha: 1 card full */
+    grid-column: span 6; /* Terceira linha: 1 card full */
 }
 
 .card:nth-child(6) {
-    grid-column: span 12; /* Quarta linha: 1 card full */
+    grid-column: span 6; /* Quarta linha: 1 card full */
 }
 
 .card:nth-child(7) {
@@ -291,10 +277,6 @@
     color: #777BB4;
 }
 
-/* JSON */
-.skillIcon.json {
-    color: #ccae00;
-}
 /* React */
 .skillIcon.react {
     color: #61DAFB;
@@ -303,11 +285,6 @@
 /* Vue */
 .skillIcon.vue {
     color: #42B883;
-}
-
-/* Nuxt */
-.skillIcon.nuxt {
-    color: #00DC82;
 }
 
 /* TailwindCSS */
@@ -323,20 +300,6 @@
 /* SASS */
 .skillIcon.sass {
     color: #CC6699;
-}
-
-/* Figma */
-.skillIcon.figma {
-    background: linear-gradient(135deg, #F24E1E 0%, #A259FF 50%, #1ABCFE 100%);
-    -webkit-background-clip: text;
-    background-clip: text; 
-    -webkit-text-fill-color: transparent;
-    display: inline-block; 
-}
-
-/* Pinia */
-.skillIcon.pinia {
-    color: #FFD859;
 }
 
 /* Context API */
@@ -418,11 +381,6 @@
 @media screen and (max-width: 768px) {
     .habilidades {
         padding: 60px 0;
-    }
-
-    .divisor {
-        height: 100px;
-        bottom: -45px;
     }
 
     .titulo {

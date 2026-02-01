@@ -2,9 +2,10 @@
   "categories": [
     {
       "id": "core-languages",
-      "title": "Core & Linguagens",
-      "description": "Fundamentos sólidos em desenvolvimento web",
+      "title": "Arquitetura Web",
+      "description": "A base estrutural para interfaces modernas.",
       "gradient": "linear-gradient(80deg, #1a1a1a 70%, #1e3a5f)",
+      "icon": "base",
       "iconColor": "#60a5fa",
       "size": "half",
       "skills": [
@@ -19,18 +20,15 @@
         {
           "name": "JavaScript",
           "icon": null
-        },
-        {
-          "name": "JSON",
-          "icon": null
         }
       ]
     },
     {
       "id": "frameworks",
-      "title": "Front-End Frameworks & Libs",
+      "title": "Front-End Frameworks",
       "description": "Desenvolvimento de aplicações modernas e escaláveis",
       "gradient": "linear-gradient(70deg, #1a1a1a 70%, #2d4a3e)",
+      "icon": "brain",
       "iconColor": "#6ee7b7",
       "size": "half",
       "skills": [
@@ -50,9 +48,10 @@
     },
     {
       "id": "styling-ui",
-      "title": "Estilização & UI",
+      "title": "UI/UX",
       "description": "Criação de interfaces modernas e responsivas",
       "gradient": "linear-gradient(50deg, #1a1a1a 70%, #4a1d4a)",
+      "icon": "design",
       "iconColor": "#c084fc",
       "size": "half",
       "skills": [
@@ -79,6 +78,7 @@
       "title": "Gerenciamento de Estado",
       "description": "Controle eficiente de dados complexos",
       "gradient": "linear-gradient(40deg, #1a1a1a 70%, #4a2d1e)",
+      "icon": "hook",
       "iconColor": "#fb923c",
       "size": "half",
       "skills": [
@@ -94,9 +94,10 @@
     },
     {
       "id": "creative-animation",
-      "title": "Creative Coding & Animação",
-      "description": "Experiências visuais imersivas e interativas",
+      "title": "Animações criativas e 3D Imersivo",
+      "description": "Desenvolvimento de ambientes imersivos na web.",
       "gradient": "linear-gradient(60deg, #1a1a1a 60%, #4a1d2d)",
+      "icon": "animation",
       "iconColor": "#f472b6",
       "size": "full",
       "skills": [
@@ -113,8 +114,9 @@
     {
       "id": "backend-integration",
       "title": "Back-End, Dados & Integração",
-      "description": "Conexão entre front-end e serviços externos",
+      "description": "Conexão entre Front-end e Back-end",
       "gradient": "linear-gradient(50deg, #1a1a1a 70%, #4a2d3e)",
+      "icon": "code",
       "iconColor": "#f9a8d4",
       "size": "full",
       "skills": [
@@ -138,9 +140,10 @@
     },
     {
       "id": "tools-devops",
-      "title": "Ferramentas & DevOps",
+      "title": "Infraestrutura & Deploy",
       "description": "Otimização de fluxo de trabalho e deploy",
       "gradient": "linear-gradient(80deg, #1a1a1a 70%, #1e3a5f)",
+      "icon": "DevOps",
       "iconColor": "#3b82f6",
       "size": "half",
       "skills": [
@@ -150,6 +153,14 @@
         },
         {
           "name": "Vite (Build Tool)",
+          "icon": null
+        },
+        {
+          "name": "Vercel (Deploy)",
+          "icon": null
+        },
+        {
+          "name": "Docker",
           "icon": null
         }
       ]
