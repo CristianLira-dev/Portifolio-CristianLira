@@ -61,7 +61,7 @@ function SectionHero() {
   }, []);
 
   return (
-    <section className={styles.sectionHero}>
+    <section id="home" className={styles.sectionHero}>
       <div className={styles.splineWrapper}>
         <canvas ref={canvasRef} id="canvas3d" />
       </div>
