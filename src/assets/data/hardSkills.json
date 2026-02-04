@@ -158,10 +158,6 @@
         {
           "name": "Vercel (Deploy)",
           "icon": null
-        },
-        {
-          "name": "Docker",
-          "icon": null
         }
       ]
     }

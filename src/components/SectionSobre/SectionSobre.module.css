@@ -1,8 +1,8 @@
 @import "../../assets/css/index.css";
 
 .sectionSobre {
-  width: 100%; /* Mudado de 100vw para evitar scroll horizontal indesejado */
-  min-height: 100dvh; /* Mudado para vh para compatibilidade, ou dvh se preferir */
+  width: 100%; 
+  min-height: 100dvh; 
   background-color: var(--cor-preto);
   display: flex;
   align-items: center;
@@ -21,68 +21,165 @@
 }
 
 .title {
-  font-size: 2.5rem;
-  color: #fff; /* Ou use uma variável var(--cor-branco) */
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-  margin-bottom: 1rem;
+  font-size: var(--f7);
+  font-family: var(--bold);
+  color: var(--cor-branco);
 }
 
 /* Onde a mágica do alinhamento acontece */
 .content {
   display: flex;
-  flex-direction: row; /* Coloca um ao lado do outro */
-  align-items: center; /* Centraliza verticalmente texto e imagem */
-  justify-content: space-between; /* Espalha eles */
-  gap: 4rem; /* Distância entre o texto e a foto */
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
+  margin: -100px 0 0 0;
 }
 
 .textContainer {
-  flex: 1; /* Ocupa o espaço disponível */
-  color: #dcdcdc; /* Um cinza claro para melhor leitura no fundo preto */
-  font-size: 1.1rem;
-  line-height: 1.6;
+  flex: 1;
+  color: var(--cor-branco); 
+  font-size: var(--f2);
+  font-family: var(--light);
+  line-height: 1.5;
 }
 
 .textContainer p {
     margin-bottom: 1rem;
 }
 
+strong {
+  font-family: var(--bold);
+}
+
 .fotoContainer {
   flex: 1; /* Ocupa o mesmo espaço que o texto (50/50) */
   display: flex;
-  justify-content: center; /* Garante que a imagem fique no meio do bloco dela */
+  justify-content: center; 
   position: relative;
 }
 
 .fotoContainer img {
-  max-width: 500px; /* Tamanho máximo da foto */
+  max-width: 500px;
   width: 100%;
   height: auto;
-  border-radius: 12px; /* Ou 50% se quiser redonda */
   object-fit: cover;
-  transition: transform 0.3s ease;
 }
 
-.fotoContainer img:hover {
-    transform: scale(1.02);
+/* --- Ícones de Frameworks Flutuantes --- */
+.iconReact,
+.iconVue,
+.iconNuxt {
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.9;
+  }
+
+/* React - Direita Superior */
+.iconReact {
+  top: 30%;
+  right: 20%;
+  color: #61dafb;
+  animation: floatReact 6s ease-in-out infinite;
+}
+
+/* Vue - Direita Inferior */
+.iconVue {
+  bottom: 15%;
+  right: 8%;
+  color: #42b883;
+  animation: floatVue 7s ease-in-out infinite;
+}
+
+/* Nuxt - Esquerda Meio */
+.iconNuxt {
+  top: 60%;
+  left: 5%;
+  transform: translateY(-50%);
+  animation: floatNuxt 8s ease-in-out infinite;
+}
+
+.iconNuxt img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Animações suaves de flutuação */
+@keyframes floatReact {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, -15px) rotate(5deg);
+  }
+  50% {
+    transform: translate(-5px, -25px) rotate(-3deg);
+  }
+  75% {
+    transform: translate(15px, -10px) rotate(7deg);
+  }
+}
+
+@keyframes floatVue {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(-12px, 18px) rotate(-6deg);
+  }
+  66% {
+    transform: translate(8px, 10px) rotate(4deg);
+  }
+}
+
+@keyframes floatNuxt {
+  0%, 100% {
+    transform: translateY(-50%) translate(0, 0) rotate(0deg);
+  }
+  30% {
+    transform: translateY(-50%) translate(15px, -12px) rotate(8deg);
+  }
+  60% {
+    transform: translateY(-50%) translate(-10px, 15px) rotate(-5deg);
+  }
 }
 
 /* --- Responsividade (Celular) --- */
 @media (max-width: 768px) {
   .content {
-    flex-direction: column-reverse; /* Foto em cima, texto em baixo no mobile */
+    flex-direction: column;
     text-align: center;
-    gap: 2rem;
-  }
-
-  .title {
-    font-size: 2rem;
+    margin: 20px 0 0 0;
   }
 
   .fotoContainer img {
-    max-width: 250px;
+    max-width: 400px;
+  }
+
+  /* Ajusta os ícones para telas menores */
+  .iconReact,
+  .iconVue,
+  .iconNuxt {
+    font-size: 45px;
+  }
+
+  .iconNuxt img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .iconReact {
+    top: 30%;
+    right: 13%;
+  }
+
+  .iconVue {
+    bottom: 12%;
+    right: 1%;
+  }
+
+  .iconNuxt {
+    top: 55%;
+    left: 3%;
   }
 }

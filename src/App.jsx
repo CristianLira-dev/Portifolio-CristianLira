@@ -9,6 +9,7 @@ function App() {
     <div>
       <Header />
       <SectionHero />
+      <SectionSobre />
       <SectionHabilidades />
     </div>
   )
