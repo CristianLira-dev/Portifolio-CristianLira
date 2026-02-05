@@ -4,11 +4,12 @@ import styles from "./SectionHero.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faWhatsapp, } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
+import Button from "../Button/Button.jsx";
 
 function SectionHero() {
   const canvasRef = useRef(null);
   const splineInstance = useRef(null);
-  const { t, i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -111,14 +112,7 @@ function SectionHero() {
           </ul>
         </nav>
         <div className={styles.buttonWrapper}>
-          <a
-            href="#projetos"
-            className={styles.button}
-            aria-label="Explorar Projetos"
-            rel="noopener noreferrer"
-          >
-           {t("hero.button_projects")}
-          </a>
+          <Button />
         </div>
       </div>
     </section>

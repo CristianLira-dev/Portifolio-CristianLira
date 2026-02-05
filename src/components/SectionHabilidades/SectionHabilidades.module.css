@@ -31,7 +31,7 @@
 
 .titulo h2 {
     font-family: var(--bold);
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: var(--f8);
     line-height: 1;
     width: 100%;
     max-width: 800px;

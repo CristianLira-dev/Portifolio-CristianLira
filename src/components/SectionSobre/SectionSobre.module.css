@@ -7,7 +7,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px 0 20px; /* Espaçamento interno para não colar nas bordas */
+  padding: 0 20px; /* Espaçamento interno para não colar nas bordas */
+  position: relative; /* necessário para posicionar a foto absolute no interior da seção */
 }
 
 /* Limita a largura do conteúdo para não ficar gigante em monitores wide */
@@ -33,7 +34,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: -100px 0 0 0;
+  padding-right: 50%; /* reserva espaço para a imagem absoluta à direita */
 }
 
 .textContainer {
@@ -53,17 +54,52 @@ strong {
 }
 
 .fotoContainer {
-  flex: 1; /* Ocupa o mesmo espaço que o texto (50/50) */
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  width: 45%;
   display: flex;
-  justify-content: center; 
-  position: relative;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.fotoContainer img {
-  max-width: 500px;
+.fotoContainer .fotoPerfil {
+  max-width: 600px;
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .fotoContainer {
+    width: 55%;
+    right: 3%;
+  }
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.btnBaixar {
+  color: var(--cor-preto);
+  background-color: var(--cor-branco);
+  padding: 0.75rem 1.5rem;  
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btnBaixar:hover {
+  border: none;
+  transform: translateY(-3px);
+  color: var(--cor-preto);
+}
+
+.btnBaixar:active {
+  transform: translateY(0);
 }
 
 /* --- Ícones de Frameworks Flutuantes --- */
@@ -85,7 +121,7 @@ strong {
 
 /* Vue - Direita Inferior */
 .iconVue {
-  bottom: 15%;
+  bottom: 8%;
   right: 8%;
   color: #42b883;
   animation: floatVue 7s ease-in-out infinite;
@@ -93,8 +129,8 @@ strong {
 
 /* Nuxt - Esquerda Meio */
 .iconNuxt {
-  top: 60%;
-  left: 5%;
+  top: 55%;
+  left: 10%;
   transform: translateY(-50%);
   animation: floatNuxt 8s ease-in-out infinite;
 }
@@ -144,12 +180,14 @@ strong {
   }
 }
 
+
 /* --- Responsividade (Celular) --- */
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
     text-align: center;
     margin: 20px 0 0 0;
+    padding-right: 0; /* remove espaço reservado em telas pequenas */
   }
 
   .fotoContainer img {
@@ -169,17 +207,24 @@ strong {
   }
 
   .iconReact {
-    top: 30%;
-    right: 13%;
+    top: 6%;
+    right: 10%;
   }
 
   .iconVue {
-    bottom: 12%;
-    right: 1%;
+    bottom: 6%;
+    right: 8%;
   }
 
   .iconNuxt {
-    top: 55%;
-    left: 3%;
+    top: 48%;
+    left: 6%;
+  }
+
+  /* Em telas pequenas, torne a foto estática dentro do fluxo para evitar sobreposição do texto */
+  .fotoContainer {
+    position: static;
+    width: 100%;
+    margin-top: 0.5rem;
   }
 }

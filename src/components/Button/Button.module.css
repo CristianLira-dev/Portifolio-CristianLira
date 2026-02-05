@@ -1,0 +1,20 @@
+.button {
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: solid 1px var(--cor-branco);
+  color: var(--cor-branco);
+  font-family: (--semibold);
+  font-size: var(--f1);
+  transition: all 0.3s ease;
+}
+.button:hover {
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  background-color: var(--cor-branco);
+  color: var(--cor-preto);
+  
+}
