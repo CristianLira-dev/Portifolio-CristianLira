@@ -3,11 +3,15 @@ import cristian from "../../assets/images/cristian.png";
 import Nuxt from "../../assets/images/NuxtSobre.png";
 import { FaReact, FaVuejs } from "react-icons/fa";
 import Button from "../Button/Button";
+import { useTranslation } from "react-i18next";
+
 
 function SectionSobre() {
+      const { t, i18n } = useTranslation();
   const anoAtual = new Date().getFullYear();
   const nascimento = 2008;
   const idade = anoAtual - nascimento;
+
   return (
     <section
       className={styles.sectionSobre}
@@ -15,37 +19,35 @@ function SectionSobre() {
       aria-label="Seção Sobre Mim"
     >
       <div className={styles.container}>
-        <h2 className={styles.title}>Sobre Mim</h2>
+        <h2 className={styles.title}>{t("about.title")}</h2>
 
         <div className={styles.content}>
           <div className={styles.textContainer}>
             <p>
-              Olá! Meu nome é <strong>Cristian Lira</strong>, tenho {idade} anos
-              e sou um Desenvolvedor Front-End apaixonado por construir a web
-              moderna. Meu foco está em criar interfaces performáticas,
-              acessíveis e responsivas que resolvam problemas reais.
+              {t("about.description_1")}
+              <strong>Cristian Lira</strong>, {t("about.description_1_2")}{" "}
+              {idade} {t("about.description_1_3")}
             </p>
+
             <p>
-              Domino a construção de Single Page Applications (SPA) utilizando{" "}
-              <strong>React.js</strong> (Vite) e <strong>Vue.js (Nuxt)</strong>,
-              sempre aplicando boas práticas de arquitetura, SEO, SSR e Clean
-              Code. Mais do que dominar a sintaxe, entendo como conectar o
-              Front-End ao mundo real, consumindo <strong>APIs REST</strong> e
-              integrando sistemas complexos tendo experiência com PHP e MySQL.
+              {t("about.description_2")} <strong>React.js</strong> {t("about.description_2_2")}{" "}
+              <strong>Vue.js (Nuxt.js)</strong>,{" "}{t("about.description_2_3")} {" "}
+              <strong>APIs REST</strong>{" "}{t("about.description_2_4")}
             </p>
+
             <p>
-              Estou sempre em busca do próximo nível, sempre busando o estudo em
-              novas tecnologias e aprimorando minhas habilidades para entregar
-              soluções cada vez melhores.
+              {t("about.description_3")}
             </p>
+
             <div className={styles.buttonsContainer}>
               <a
                 href="../../assets/Cristian-Lira.pdf"
                 className={styles.btnBaixar}
                 download="Cristian-Lira.pdf"
               >
-                Baixar CV
+                {(t("about.button"))}
               </a>
+
               <Button />
             </div>
           </div>
@@ -58,12 +60,15 @@ function SectionSobre() {
             />
 
             {/* Ícones de frameworks flutuantes */}
+
             <div className={styles.iconReact}>
               <FaReact />
             </div>
+
             <div className={styles.iconVue}>
               <FaVuejs />
             </div>
+
             <div className={styles.iconNuxt}>
               <img src={Nuxt} alt="Nuxt.js" />
             </div>

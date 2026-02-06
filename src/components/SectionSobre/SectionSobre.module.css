@@ -1,23 +1,22 @@
 @import "../../assets/css/index.css";
 
 .sectionSobre {
-  width: 100%; 
-  min-height: 100dvh; 
+  width: 100%;
+  min-height: 100dvh;
   background-color: var(--cor-preto);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 20px; /* Espaçamento interno para não colar nas bordas */
-  position: relative; /* necessário para posicionar a foto absolute no interior da seção */
+  padding: 0 20px;
+  position: relative;
 }
 
-/* Limita a largura do conteúdo para não ficar gigante em monitores wide */
 .container {
   max-width: 1200px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza o título */
+  align-items: center;
   gap: 3rem;
 }
 
@@ -27,26 +26,25 @@
   color: var(--cor-branco);
 }
 
-/* Onde a mágica do alinhamento acontece */
 .content {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding-right: 50%; /* reserva espaço para a imagem absoluta à direita */
+  padding-right: 50%;
 }
 
 .textContainer {
   flex: 1;
-  color: var(--cor-branco); 
+  color: var(--cor-branco);
   font-size: var(--f2);
   font-family: var(--light);
   line-height: 1.5;
 }
 
 .textContainer p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 strong {
@@ -80,12 +78,13 @@ strong {
 .buttonsContainer {
   display: flex;
   gap: 1rem;
+  margin: 0 0 1rem 0;
 }
 
 .btnBaixar {
   color: var(--cor-preto);
   background-color: var(--cor-branco);
-  padding: 0.75rem 1.5rem;  
+  padding: 0.75rem 1.5rem;
   cursor: pointer;
   border: none;
   border-radius: 50px;
@@ -102,16 +101,14 @@ strong {
   transform: translateY(0);
 }
 
-/* --- Ícones de Frameworks Flutuantes --- */
 .iconReact,
 .iconVue,
 .iconNuxt {
   position: absolute;
   font-size: 50px;
   opacity: 0.9;
-  }
+}
 
-/* React - Direita Superior */
 .iconReact {
   top: 30%;
   right: 20%;
@@ -119,15 +116,13 @@ strong {
   animation: floatReact 6s ease-in-out infinite;
 }
 
-/* Vue - Direita Inferior */
 .iconVue {
   bottom: 8%;
-  right: 8%;
+  right: 0%;
   color: #42b883;
   animation: floatVue 7s ease-in-out infinite;
 }
 
-/* Nuxt - Esquerda Meio */
 .iconNuxt {
   top: 55%;
   left: 10%;
@@ -140,7 +135,6 @@ strong {
   height: 60px;
 }
 
-/* Animações suaves de flutuação */
 @keyframes floatReact {
   0%, 100% {
     transform: translate(0, 0) rotate(0deg);
@@ -180,48 +174,29 @@ strong {
   }
 }
 
-
-/* --- Responsividade (Celular) --- */
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
     text-align: center;
-    margin: 20px 0 0 0;
-    padding-right: 0; /* remove espaço reservado em telas pequenas */
+    padding-right: 0;
+    gap: 0;
+  }
+
+  .buttonsContainer{
+    align-items: center;
+    justify-content: center;
   }
 
   .fotoContainer img {
     max-width: 400px;
   }
 
-  /* Ajusta os ícones para telas menores */
   .iconReact,
   .iconVue,
-  .iconNuxt {
-    font-size: 45px;
-  }
-
   .iconNuxt img {
-    width: 45px;
-    height: 45px;
+    display: none;
   }
 
-  .iconReact {
-    top: 6%;
-    right: 10%;
-  }
-
-  .iconVue {
-    bottom: 6%;
-    right: 8%;
-  }
-
-  .iconNuxt {
-    top: 48%;
-    left: 6%;
-  }
-
-  /* Em telas pequenas, torne a foto estática dentro do fluxo para evitar sobreposição do texto */
   .fotoContainer {
     position: static;
     width: 100%;

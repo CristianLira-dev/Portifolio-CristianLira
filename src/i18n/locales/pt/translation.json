@@ -12,6 +12,19 @@
     "style_text": "código e design.",
     "subtitle": "Desenvolvedor Front-End | UI/UX Designer",
     "button_projects": "Explorar Projetos"
+},
+  "about": {
+    "title": "Sobre Mim",
+    "description_1": "Olá! Meu nome é ",
+    "description_1_2": "tenho",
+    "description_1_3": "anos e sou um Desenvolvedor Front-End apaixonado por construir a web moderna. Meu foco está em criar interfaces performáticas, acessíveis e responsivas que resolvam problemas reais.",
+    "description_2": " Domino a construção de Single Page Applications (SPA) utilizando",
+    "description_2_2": "e",
+    "description_2_3": "sempre aplicando boas práticas de arquitetura, SEO, SSR e Clean Code. Mais do que dominar a sintaxe, entendo como conectar o Front-End ao mundo real, consumindo",
+    "description_2_4": "e integrando sistemas complexos tendo experiência com PHP e MySQL.",
+    "description_3": "Estou sempre em busca do próximo nível, sempre buscando o estudo em novas tecnologias e aprimorando minhas habilidades para entregar soluções cada vez melhores.",
+    "button" : "Baixar CV"
+  }
 }
-}
+
     

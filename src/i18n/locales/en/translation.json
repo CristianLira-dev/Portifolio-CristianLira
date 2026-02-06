@@ -12,5 +12,17 @@
     "style_text": "code and design.",
     "subtitle": "Front-End Developer | UI/UX Designer",
     "button_projects": "Explore Projects"
+  },
+  "about": {
+    "title": "About Me",
+    "description_1": "Hello! My name is ",
+    "description_1_2": "I am",
+    "description_1_3": " years old and I am a Front-End Developer passionate about building the modern web. My focus is on creating performant, accessible, and responsive interfaces that solve real problems.",
+    "description_2": "I master the construction of Single Page Applications (SPA) using",
+    "description_2_2": "and",
+    "description_2_3": "always applying architecture best practices, SEO, SSR, and Clean Code. More than mastering syntax, I understand how to connect Front-End to the real world, consuming",
+    "description_2_4": "and integrating complex systems, having experience with PHP and MySQL.",
+    "description_3": "I am always striving for the next level, constantly studying new technologies and honing my skills to deliver increasingly better solutions.",
+    "button" : "Download CV"
   }
 }
