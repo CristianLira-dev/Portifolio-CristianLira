@@ -93,9 +93,9 @@
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
     width: 100%;
-    max-width: 80%;
+    max-width: 1400px;
     padding: 0 80px 80px 80px;
-    margin: 0 0 100px 0;
+    margin: 0 auto 100px auto;
 }
 
 .card {
@@ -108,7 +108,6 @@
     flex-direction: column;
     gap: 20px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .card:hover {
@@ -116,38 +115,27 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Tamanhos dos cards */
-.half {
-    grid-column: span 6;
-}
-
-.full {
-    grid-column: span 12;
-}
-
-/* Layout específico para 7 cards de Hard Skills */
+/* Tamanhos dos cards - Hard Skills */
 .card:nth-child(1),
 .card:nth-child(2) {
-    grid-column: span 6; /* Primeira linha: 2 cards */
+    grid-column: span 6;
 }
 
 .card:nth-child(3),
 .card:nth-child(4) {
-    grid-column: span 6; /* Segunda linha: 2 cards */
+    grid-column: span 6;
 }
 
-.card:nth-child(5) {
-    grid-column: span 6; /* Terceira linha: 1 card full */
-}
-
+.card:nth-child(5),
 .card:nth-child(6) {
-    grid-column: span 6; /* Quarta linha: 1 card full */
+    grid-column: span 6;
 }
 
 .card:nth-child(7) {
-    grid-column: span 12; /* Quinta linha: 1 card full (Tools) */
+    grid-column: span 12;
 }
 
+/* Soft Skills - 3 cards por linha */
 .softSkillCard {
     grid-column: span 4;
 }
@@ -221,7 +209,7 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
-    padding: 0 15px;
+    padding: 15px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
@@ -245,6 +233,12 @@
     font-size: 2.5rem;
 }
 
+.skillIcon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
 /* Nome da skill */
 .skillHeader .skillName {
     font-family: var(--semibold);
@@ -258,90 +252,74 @@
 /* ============================================
    CORES ESPECÍFICAS DAS TECNOLOGIAS
    ============================================ */
-/* HTML5 */
 .skillIcon.html5 {
     color: #E34F26;
 }
 
-/* CSS3 */
 .skillIcon.css3 {
     color: #1572B6;
 }
 
-/* JavaScript */
 .skillIcon.javascript {
     color: #F7DF1E;
 }
 
-/* PHP */
 .skillIcon.php {
     color: #777BB4;
 }
 
-/* React */
 .skillIcon.react {
     color: #61DAFB;
 }
 
-/* Vue */
 .skillIcon.vue {
     color: #42B883;
 }
 
-/* TailwindCSS */
 .skillIcon.tailwind {
     color: #06B6D4;
 }
 
-/* Bootstrap */
 .skillIcon.bootstrap {
     color: #7952B3;
 }
 
-/* SASS */
 .skillIcon.sass {
     color: #CC6699;
 }
 
-/* Context API */
 .skillIcon.context {
     color: #61DAFB;
 }
 
 .skillIcon.threejs {
-    background: #FFFFFF; /* Fallback para navegadores antigos */
     background: linear-gradient(135deg, #FFFFFF 0%, #808080 100%);
     -webkit-background-clip: text;
     background-clip: text; 
     -webkit-text-fill-color: transparent;
     display: inline-block; 
 }
-/* GSAP */
+
 .skillIcon.gsap {
     color: #88CE02;
 }
 
-/* MySQL */
 .skillIcon.mysql {
     color: #4479A1;
 }
 
-/* API REST */
 .skillIcon.api {
     color: #009688;
 }
 
-/* Axios */
 .skillIcon.axios {
     color: #5A29E4;
 }
 
-/* Git */
 .skillIcon.git {
     color: #F05032;
 }
 
-/* Vite */
 .skillIcon.vite {
     background: linear-gradient(135deg, #646CFF, #BD34FE);
     -webkit-background-clip: text;
@@ -349,13 +327,32 @@
 }
 
 /* ============================================
-   RESPONSIVIDADE - TABLET
+   RESPONSIVIDADE - DESKTOP GRANDE (1440px+)
    ============================================ */
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1441px) {
     .bentoGrid {
+        max-width: 1600px;
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE - DESKTOP MÉDIO (1200px - 1440px)
+   ============================================ */
+@media screen and (max-width: 1440px) {
+    .bentoGrid {
+        max-width: 1200px;
+        padding: 0 60px 80px 60px;
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE - TABLET GRANDE (1024px - 1199px)
+   ============================================ */
+@media screen and (max-width: 1199px) {
+    .bentoGrid {
+        max-width: 100%;
         padding: 0 40px 60px 40px;
         gap: 16px;
-        max-width: 90%;
     }
 
     .titulo {
@@ -366,7 +363,21 @@
         padding: 0 40px;
     }
 
-    .half,
+    /* Hard Skills - 2 cards por linha */
+    .card:nth-child(1),
+    .card:nth-child(2),
+    .card:nth-child(3),
+    .card:nth-child(4),
+    .card:nth-child(5),
+    .card:nth-child(6) {
+        grid-column: span 6;
+    }
+
+    .card:nth-child(7) {
+        grid-column: span 12;
+    }
+
+    /* Soft Skills - 2 cards por linha */
     .softSkillCard {
         grid-column: span 6;
     }
@@ -377,9 +388,54 @@
 }
 
 /* ============================================
-   RESPONSIVIDADE - MOBILE
+   RESPONSIVIDADE - TABLET (768px - 1023px)
    ============================================ */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
+    .bentoGrid {
+        padding: 0 30px 60px 30px;
+    }
+
+    .titulo {
+        padding: 30px 30px;
+    }
+
+    .tabs {
+        padding: 0 30px;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 35px;
+    }
+
+    .cardContent h3 {
+        font-size: 1.35rem;
+    }
+
+    .skillsList {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 10px;
+    }
+
+    .skillHeader {
+        min-height: 110px;
+        padding: 12px;
+    }
+
+    .skillIcon {
+        font-size: 2.2rem;
+    }
+
+    .skillIcon img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE - MOBILE GRANDE (600px - 767px)
+   ============================================ */
+@media screen and (max-width: 767px) {
     .habilidades {
         padding: 60px 0;
     }
@@ -413,15 +469,20 @@
         grid-template-columns: 1fr;
         padding: 0 20px 60px 20px;
         gap: 16px;
-        max-width: 100%;
     }
 
     .card {
         padding: 30px;
     }
 
-    .half,
-    .full,
+    /* Todos os cards ocupam 1 coluna no mobile */
+    .card:nth-child(1),
+    .card:nth-child(2),
+    .card:nth-child(3),
+    .card:nth-child(4),
+    .card:nth-child(5),
+    .card:nth-child(6),
+    .card:nth-child(7),
     .softSkillCard {
         grid-column: span 1;
     }
@@ -452,21 +513,88 @@
     }
 
     .skillHeader {
-        padding: 15px 10px;
+        padding: 12px 8px;
         min-height: 100px;
+        gap: 8px;
     }
 
     .skillIcon {
         font-size: 2rem;
     }
 
+    .skillIcon img {
+        width: 32px;
+        height: 32px;
+    }
+
     .skillHeader .skillName {
         font-size: 0.8rem;
     }
+}
 
-    .skillLevel {
-        font-size: 0.8rem;
-        padding: 5px 14px;
+/* ============================================
+   RESPONSIVIDADE - MOBILE PEQUENO (até 480px)
+   ============================================ */
+@media screen and (max-width: 480px) {
+    .titulo h2 {
+        font-size: 1.75rem;
+    }
+
+    .titulo p {
+        font-size: 0.95rem;
+    }
+
+    .tabs {
+        gap: 10px;
+    }
+
+    .tab {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+
+    .bentoGrid {
+        padding: 0 15px 60px 15px;
+        gap: 14px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .cardContent h3 {
+        font-size: 1.15rem;
+    }
+
+    .cardDescription {
+        font-size: 0.85rem;
+    }
+
+    .skillsList {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .skillHeader {
+        padding: 10px 6px;
+        min-height: 90px;
+    }
+
+    .skillIcon {
+        font-size: 1.8rem;
+    }
+
+    .skillIcon img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .skillHeader .skillName {
+        font-size: 0.75rem;
+    }
+
+    .cardIcon {
+        font-size: 1.75rem;
     }
 }
 
@@ -526,7 +654,19 @@
     }
     
     .softSkillCard .cardIcon svg {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cardIcon svg {
         width: 50px;
         height: 50px;
+    }
+    
+    .softSkillCard .cardIcon svg {
+        width: 40px;
+        height: 40px;
     }
 }

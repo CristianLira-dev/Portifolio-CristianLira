@@ -140,6 +140,9 @@
 }
 
 .Dropdown li {
+ font-size: var(--f1);
+ color: var(--cor-branco);
+ font-family: var(--semibold);
   margin-bottom: 5px;
   width: 100%;
 }
@@ -219,7 +222,7 @@
   }
   
   .Nav ul li a {
-    font-size: var(--f2);
+    font-size: var(--f1);
   }
 }
 
