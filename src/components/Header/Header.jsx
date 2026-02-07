@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
+import logoCristian from "../../assets/images/logo.png";
 
 
 function Header() {
@@ -28,7 +29,8 @@ const languages = [
     return (
       <header className={styles.SectionHeader}>
         <div className={styles.Logo}>
-          <h5>Cristian Lira</h5>
+          <img src={logoCristian} alt="Logo de Cristian Lira" />
+          <strong>Cristian</strong><p>Lira</p>
         </div>
         <nav className={styles.Nav}>
           <ul>
@@ -50,7 +52,6 @@ const languages = [
           </ul>
         </nav>
         <div className={styles.LanguageContainer}>
-          {/* Botão Principal do Select */}
           <button className={styles.SelectBtn} onClick={() => setIsOpen(!isOpen)}>
             <img src={currentLanguage.flag} alt="" width="20" />
 

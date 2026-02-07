@@ -4,140 +4,244 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(100% - 360px);
-  max-width: 1920px;
+  width: calc(100% - 40px);
+  max-width: 1200px;
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  height: 60px;
+  height: auto;
+  min-height: 60px;
   border-radius: 100px;
-  padding: 0 35px;
+  padding: 8px 16px;
   background-color: var(--cor-escuro-3-transparente);
   backdrop-filter: blur(10px);
   z-index: 100;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .Logo {
-  font-family: var(--semibold);
-  font-size: var(--f4);
-  color: var(--cor-branco);
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.Nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.Logo strong {
+  font-family: var(--bold);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+}
+
+.Logo p {
+  font-family: var(--semibold);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+  margin-left: 5px;
+}
+
+.Logo img {
+  width: 45px;
+  height: auto;
+  margin: 0 10px 0 0;
+}
+
+.Nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .Nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  padding: 6px 8px;
+  margin: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .Nav ul li a {
-    font-family: var(--light);
-    font-size: var(--f1);
-    color: var(--cor-branco);
-    text-decoration: none;
-    transition: all 0.3s;
+  font-family: var(--light);
+  font-size: var(--f1);
+  color: var(--cor-branco);
+  text-decoration: none;
+  transition: all 0.3s;
+  white-space: nowrap;
 }
 
 .Nav ul li a:hover {
-    color: var(--cor-rosa);
+  color: var(--cor-rosa);
 }
 
 .Language button {
-    border: solid 1px var(--cor-branco);
-    padding: 10px 20px;
-    border-radius: 50px;
+  border: solid 1px var(--cor-branco);
+  padding: 10px 20px;
+  border-radius: 50px;
 }
 
 .LanguageContainer {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
 }
 
 .SelectBtn {
-    background: #222; /* Fundo escuro */
-    color: white;
-    border: 1px solid #444;
-    padding: 8px 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: 0.3s;
-    min-width: 150px;
+  background: var(--cor-escuro-3);
+  color: var(--cor-branco);
+  border: 1px solid var(--cor-escuro-5);
+  padding: 8px 12px;
+  border-radius: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.25s;
+  min-width: 120px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.SelectBtn:hover {
+  border: solid 1px var(--cor-branco);
 }
 
 .Arrow {
-    font-size: var(--f2);
-    transition: transform 0.3s;
-    margin-left: auto;
+  font-size: var(--f2);
+  transition: transform 0.3s;
+  margin-left: auto;
 }
 
 .Arrow.Open {
-    transform: rotate(180deg); /* O "V" vira para cima quando abre */
+  transform: rotate(180deg);
 }
 
-/* O Menu Pop-up */
 .Dropdown {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 110%; /* Aparece logo abaixo do botão */
-    left: 0;
-    width: 100%;
-    background: #1a1a1a; /* Fundo mais escuro para o menu */
-    border: 1px solid #333;
-    border-radius: 8px;
-    list-style: none;
-    padding: 10px;
-    z-index: 100;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  list-style: none;
+  padding: 10px;
+  z-index: 100;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 .Dropdown li {
-    margin-bottom: 5px;
-    width: 100%;
+  margin-bottom: 5px;
+  width: 100%;
 }
 
 .Dropdown li:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-/* Estilo comum dos botões dentro do menu */
 .Dropdown button {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
-    text-align: left;
-    color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: left;
+  color: white;
 }
 
-/* O selecionado fica com fundo MAIS CLARO */
 .Selected {
-    background: #444; 
-    font-weight: bold;
+  background: #444;
+  font-weight: bold;
 }
 
-/* Os não selecionados ficam com fundo MAIS ESCURO */
 .NotSelected {
-    background: #222;
+  background: #222;
 }
 
 .Dropdown button:hover {
-    background: #007bff; /* Cor de destaque ao passar o mouse */
+  background: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .SectionHeader {
+    max-width: 960px;
+    top: 14px;
+  }
+  
+  .Nav ul {
+    gap: 20px;
+  }
+  
+  .SelectBtn {
+    min-width: 110px;
+    padding: 8px 10px;
+  }
+  
+  .Logo strong,
+  .Logo p {
+    font-size: calc(var(--f2) - 2px);
+  }
+}
+
+@media (max-width: 720px) {
+  .SectionHeader {
+    width: calc(100% - 24px);
+    padding: 10px 12px;
+    border-radius: 14px;
+  }
+  
+  .LanguageContainer {
+    order: 2;
+    margin-left: auto;
+  }
+  
+  .Nav {
+    order: 3;
+    width: 100%;
+  }
+  
+  .Nav ul {
+    gap: 16px;
+  }
+  
+  .Nav ul li a {
+    font-size: var(--f2);
+  }
+}
+
+@media (max-width: 420px) {
+  .Logo img {
+    width: 38px;
+  }
+  
+  .SelectBtn {
+    min-width: 90px;
+    padding: 6px 8px;
+    gap: 6px;
+  }
+  
+  .Dropdown {
+    top: 105%;
+    left: auto;
+    right: 0;
+    width: 220px;
+  }
+  
+  .Nav ul {
+    gap: 12px;
+  }
 }
