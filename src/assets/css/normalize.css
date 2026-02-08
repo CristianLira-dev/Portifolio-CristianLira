@@ -22,7 +22,7 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--cor-azul-forte);
+  background-color: var(--cor-preto);
   scroll-behavior: smooth;
   overflow-x: hidden !important;
 }

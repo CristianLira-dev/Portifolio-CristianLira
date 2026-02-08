@@ -6,7 +6,6 @@ import figma from "../../assets/images/figma.png";
 import nuxt from "../../assets/images/nuxt.png";
 import pinia from "../../assets/images/pinia.png";
 import vite from "../../assets/images/vite.png";
-import docker from "../../assets/images/docker.png";
 import vercel from "../../assets/images/vercel.png";
 
 // Importar ícones do react-icons
@@ -70,7 +69,6 @@ function SectionHabilidades() {
     "Git (Versionamento)": { icon: <FaGitAlt />, class: "git" },
     "Vite (Build Tool)": { icon: <img src={vite} alt="Vite" />, class: "vite" },
     "Vercel (Deploy)": { icon: <img src={vercel} alt="Vercel" />, class: "vercel" },
-    "Docker": { icon: <img src={docker} alt="Docker" />, class: "docker" },
   };
 
   // Mapeamento de ícones para Soft Skills

@@ -1,0 +1,84 @@
+{
+  "tecnologias": [
+    {
+      "id": 1,
+      "nome": "HTML5",
+      "tipo": "icon"
+    },
+    {
+      "id": 2,
+      "nome": "CSS3",
+      "tipo": "icon"
+    },
+    {
+      "id": 3,
+      "nome": "JavaScript",
+      "tipo": "icon"
+    },
+    {
+      "id": 4,
+      "nome": "React.js",
+      "tipo": "icon"
+    },
+    {
+      "id": 5,
+      "nome": "Vue.js",
+      "tipo": "icon"
+    },
+    {
+      "id": 6,
+      "nome": "Nuxt.js",
+      "tipo": "image"
+    },
+    {
+      "id": 7,
+      "nome": "TailwindCSS",
+      "tipo": "icon"
+    },
+    {
+      "id": 8,
+      "nome": "Bootstrap",
+      "tipo": "icon"
+    },
+    {
+      "id": 9,
+      "nome": "SASS",
+      "tipo": "icon"
+    },
+    {
+      "id": 10,
+      "nome": "Figma",
+      "tipo": "image"
+    },
+    {
+      "id": 11,
+      "nome": "Three.js",
+      "tipo": "icon"
+    },
+    {
+      "id": 12,
+      "nome": "GSAP",
+      "tipo": "icon"
+    },
+    {
+      "id": 13,
+      "nome": "MySQL",
+      "tipo": "icon"
+    },
+    {
+      "id": 14,
+      "nome": "Git",
+      "tipo": "icon"
+    },
+    {
+      "id": 15,
+      "nome": "PHP",
+      "tipo": "icon"
+    },
+    {
+      "id": 16,
+      "nome": "Vercel",
+      "tipo": "image"
+    }
+  ]
+}

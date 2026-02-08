@@ -110,8 +110,8 @@ strong {
 }
 
 .iconReact {
-  top: 30%;
-  right: 20%;
+  top: 20%;
+  right: 10%;
   color: #61dafb;
   animation: floatReact 6s ease-in-out infinite;
 }

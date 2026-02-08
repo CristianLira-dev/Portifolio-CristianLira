@@ -21,33 +21,6 @@ function SectionHero() {
 
       spline
         .load(sceneUrl)
-        .then(() => {
-          // Desabilita interações desnecessárias
-          spline.setZoom(false);
-          spline.setPan(false);
-
-          // Otimizações de performance
-          const pixelRatio = Math.min(window.devicePixelRatio, 1.5); // Reduzi de 2 para 1.5
-          spline.setPixelRatio(pixelRatio);
-
-          // Configurações adicionais de performance
-          const canvas = canvasRef.current;
-          if (canvas) {
-            // Otimiza renderização
-            canvas.style.imageRendering = "auto";
-            canvas.style.willChange = "transform";
-
-            // Força aceleração por hardware
-            canvas.style.transform = "translateZ(0)";
-          }
-
-          // Se tiver acesso ao renderer (pode variar por versão)
-          if (spline._scene) {
-            // Reduz qualidade de sombras para melhor performance
-            spline._scene.shadowEnabled = false;
-          }
-        })
-        .catch((err) => console.error("Erro ao carregar Spline:", err));
     }
 
     return () => {

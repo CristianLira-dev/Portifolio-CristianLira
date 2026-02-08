@@ -5,7 +5,7 @@ function Button() {
       const { t, i18n } = useTranslation();
     return ( 
                   <a
-                    href="#projetos"
+                    href="#projects"
                     className={styles.button}
                     aria-label="Explorar Projetos"
                     rel="noopener noreferrer"

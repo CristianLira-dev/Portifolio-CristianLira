@@ -1,0 +1,82 @@
+@import "../../assets/css/index.css";
+
+.divisor {
+  width: 100vw;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carrosselContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carrossel {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  animation: scroll 30s linear infinite;
+  white-space: nowrap;
+}
+
+.techItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  color: var(--cor-escuro-4);
+  transition: all 0.3s ease;
+}
+
+.techIcon {
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.techImage {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .divisor {
+    height: 25px;
+  }
+
+  .techItem {
+    width: 25px;
+    height: 25px;
+  }
+
+  .techIcon {
+    font-size: 25px;
+  }
+
+  .techImage {
+    width: 25px;
+    height: 25px;
+  }
+
+  .carrossel {
+    gap: 20px;
+  }
+}

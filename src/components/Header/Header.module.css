@@ -69,7 +69,7 @@
 
 .Nav ul li a {
   font-family: var(--light);
-  font-size: var(--f1);
+  font-size: var(--f2);
   color: var(--cor-branco);
   text-decoration: none;
   transition: all 0.3s;
@@ -221,9 +221,6 @@
     gap: 16px;
   }
   
-  .Nav ul li a {
-    font-size: var(--f1);
-  }
 }
 
 @media (max-width: 420px) {
@@ -246,5 +243,12 @@
   
   .Nav ul {
     gap: 12px;
+  }
+
+}
+
+@media (max-width: 360px) {
+      .Nav ul li a {
+    font-size: calc(var(--f1) - 1px);
   }
 }
