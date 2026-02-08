@@ -1,0 +1,10 @@
+@import "../../assets/css/index.css";
+
+.projetos {
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
