@@ -148,11 +148,11 @@
       "size": "half",
       "skills": [
         {
-          "name": "Git (Versionamento)",
+          "name": "Git",
           "icon": null
         },
         {
-          "name": "Vite (Build Tool)",
+          "name": "Vite",
           "icon": null
         },
         {

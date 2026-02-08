@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0px;
+    padding: 0 !important;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -95,7 +95,7 @@
     width: 100%;
     max-width: 1400px;
     padding: 0 80px 80px 80px;
-    margin: 0 auto 100px auto;
+    margin: 0 auto 50px auto;
 }
 
 .card {
