@@ -8,3 +8,9 @@
   align-items: center;
   padding: 50px 20px;
 }
+
+.projetos h2 {
+  font-family: var(--bold);
+  font-size: var(--f9);
+  margin-bottom: 20px;
+}
