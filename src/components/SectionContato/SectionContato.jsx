@@ -9,6 +9,7 @@ function SectionContato() {
 
     const [texto, setTexto] = useState("")
 
+
     return (
       <section id="contact" className={styles.SectionContato}>
         <div className={styles.container}>
@@ -49,10 +50,10 @@ function SectionContato() {
                   <Editor
                     key={t("contact.language")}
                     apiKey="h8krho8x5gu4wxlvavexdy4hb45bm5oq457o94fm0k4o6l07"
-                                    onEditorChange={(novoTexo) => {
-                                        setTexto(novoTexo);
-                                    }}
-                                    initialValue={texto}
+                    onEditorChange={(novoTexo) => {
+                      setTexto(novoTexo);
+                    }}
+                    initialValue=""
                     init={{
                       height: 300,
                       menubar: false,
@@ -64,7 +65,6 @@ function SectionContato() {
                       content_css: "dark", // CSS escuro para o conteúdo
                       language: t("contact.language"), // O código do idioma
                       language_url: t("contact.language_URL"), // O caminho onde você colou o arquivo (dentro da public)
-
                       // Estilização do conteúdo interno
                       content_style: `
         body {
