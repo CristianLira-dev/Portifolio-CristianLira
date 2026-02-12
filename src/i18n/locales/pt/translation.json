@@ -24,5 +24,16 @@
     "description_2_4": "e integrando sistemas complexos tendo experiência com PHP e MySQL.",
     "description_3": "Estou sempre em busca do próximo nível, sempre buscando o estudo em novas tecnologias e aprimorando minhas habilidades para entregar soluções cada vez melhores.",
     "button" : "Baixar CV"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Envie sua mensagem e retornarei o mais breve possível",
+    "email_placeholder": "seu@email.com",
+    "assunto_label": "Assunto",
+    "assunto_placeholder": "Sobre o que deseja falar?",
+    "menssagem": "Menssagem",
+    "language": "pt_BR",
+    "language_URL": "/langs/pt_BR.js",
+    "button": "Enviar Menssagem"
   }
 }

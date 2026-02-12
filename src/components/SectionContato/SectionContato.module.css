@@ -1,5 +1,144 @@
 @import "../../assets/css/index.css";
 
-.SectionContato{
-    color: var(--cor-vermelho);
+.SectionContato {
+    background: var(--cor-escuro-2);
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.conteudo {
+    background: var(--cor-escuro-3);
+    border-radius: 16px;
+    padding: 50px 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.titulo {
+    font-family: var(--bold);
+    font-size: var(--f8);
+    color: var(--cor-branco);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.subtitulo {
+    font-family: var(--light);
+    font-size: var(--f2);
+    color: var(--cor-cinza);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.campoWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label {
+    font-family: var(--semibold);
+    font-size: var(--f2);
+    color: var(--cor-branco);
+    margin: 0 5px;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: var(--cor-escuro-2);
+    border: 2px solid var(--cor-escuro-4);
+    border-radius: 8px;
+    font-family: var(--light);
+    font-size: var(--f2);
+    color: var(--cor-branco);
+    transition: all 0.3s var(--ease-fluid);
+    outline: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: var(--cor-escuro-5);
+}
+
+.input:focus,
+.textarea:focus {
+    border-color: var(--cor-azul-claro);
+    background: var(--cor-escuro-1);
+    box-shadow: 0 0 0 3px rgba(51, 160, 255, 0.1);
+}
+
+.textarea   span{
+    display: none;
+}
+
+
+.containerButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botaoEnviar {
+    margin-top: 16px;
+    padding: 14px 27px;
+    background: var(--cor-azul-claro);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 12px;
+    font-family: var(--semibold);
+    font-size: var(--f2);
+    cursor: pointer;
+    transition: all 0.3s var(--ease-fluid);
+    align-self: flex-start;
+}
+
+.botaoEnviar:hover {
+    transform: translateY(-2px);
+}
+
+.botaoEnviar:active {
+    transform: translateY(0);
+    border: none;
+    outline: none;
+}
+
+@media screen and (max-width: 768px) {
+    .SectionContato {
+        padding: 60px 16px;
+    }
+
+    .conteudo {
+        padding: 40px 24px;
+    }
+
+    .botaoEnviar {
+        width: 100%;
+        align-self: stretch;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .conteudo {
+        padding: 32px 20px;
+    }
+
+    .titulo {
+        font-size: var(--f6);
+    }
 }

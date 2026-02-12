@@ -23,6 +23,17 @@
     "description_2_3": "always applying architecture best practices, SEO, SSR, and Clean Code. More than mastering syntax, I understand how to connect Front-End to the real world, consuming",
     "description_2_4": "and integrating complex systems, having experience with PHP and MySQL.",
     "description_3": "I am always striving for the next level, constantly studying new technologies and honing my skills to deliver increasingly better solutions.",
-    "button" : "Download CV"
+    "button": "Download CV"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Send your message and I will get back to you as soon as possible",
+    "email_placeholder": "your@email.com",
+    "assunto_label": "Subject",
+    "assunto_placeholder": "What would you like to talk about?",
+    "menssagem": "Message",
+    "language": "",
+    "language_URL": "",
+    "button": "Send Message"
   }
 }
