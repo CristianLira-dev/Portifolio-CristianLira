@@ -6,7 +6,9 @@ import { useTranslation } from "react-i18next";
 
 function SectionContato() {    
     const { t, i18n } = useTranslation();
-
+const valorLight = getComputedStyle(document.documentElement).getPropertyValue(
+  "--light",
+);
     const [texto, setTexto] = useState("")
 
 
@@ -68,12 +70,9 @@ function SectionContato() {
                       // Estilização do conteúdo interno
                       content_style: `
         body {
-          font-family: var(--light), 'Helvetica', 'Arial', sans-serif;
-          font-size: 16px;
           color: #fafafa;
           background-color: #131519;
-          margin: 1rem;
-          line-height: 1.6;
+          line-height: 1.5;
         }
       `,
 
