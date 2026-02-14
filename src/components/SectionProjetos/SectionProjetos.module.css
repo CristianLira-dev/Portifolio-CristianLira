@@ -2,16 +2,226 @@
 
 .projetos {
   width: 100vw;
-  height: 100dvh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px 20px;
   background-color: var(--cor-preto);
+  gap: 40px;
 }
 
 .projetos h2 {
   font-family: var(--bold);
   font-size: var(--f9);
   margin-bottom: 20px;
+  color: var(--cor-branco);
+}
+
+/* Layout do Card de Projeto */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  background-color: var(--cor-escuro-2);
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid var(--cor-escuro-4);
+  transition: all 0.3s var(--ease-soft);
+}
+
+.layout:hover {
+  transform: translateY(-8px);
+  border-color: var(--cor-vinho-medio);
+  box-shadow: 0 12px 40px rgba(133, 30, 73, 0.2);
+}
+
+/* Imagem do Projeto */
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--cor-escuro-3);
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s var(--ease-soft);
+}
+
+.layout:hover .image img {
+  transform: scale(1.05);
+}
+
+/* Informações do Projeto */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.infoTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-family: var(--bold);
+  font-size: var(--f5);
+  color: var(--cor-branco);
+  margin: 0;
+}
+
+.infoTitle p {
+  font-family: var(--semibold);
+  font-size: var(--f1);
+  color: var(--cor-vinho-claro);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.description {
+  font-family: var(--light);
+  font-size: var(--f2);
+  color: var(--cor-cinza);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Tecnologias */
+.tecnologias {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tecnologias h3 {
+  font-family: var(--semibold);
+  font-size: var(--f2);
+  color: var(--cor-branco);
+  margin: 0;
+}
+
+.tecnologias .tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tecnologias .tech-tag {
+  font-family: var(--semibold);
+  font-size: var(--f0);
+  color: var(--cor-branco);
+  background: linear-gradient(135deg, var(--cor-vinho-escuro), var(--cor-vinho-medio));
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--cor-vinho-claro);
+  transition: all 0.3s var(--ease-fluid);
+}
+
+.tecnologias .tech-tag:hover {
+  background: linear-gradient(135deg, var(--cor-vinho-medio), var(--cor-vinho-claro));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(184, 92, 131, 0.3);
+}
+
+/* Botões */
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.view,
+.code {
+  flex: 1;
+}
+
+.view a,
+.code a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--semibold);
+  font-size: var(--f1);
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s var(--ease-soft);
+  cursor: pointer;
+}
+
+.view a {
+  background: linear-gradient(135deg, var(--cor-vinho-medio), var(--cor-vinho-claro));
+  color: var(--cor-branco);
+  border: 2px solid transparent;
+}
+
+.view a:hover {
+  background: linear-gradient(135deg, var(--cor-vinho-claro), var(--cor-vinho-medio));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(184, 92, 131, 0.4);
+}
+
+.code a {
+  background: transparent;
+  color: var(--cor-branco);
+  border: 2px solid var(--cor-vinho-medio);
+}
+
+.code a:hover {
+  background-color: var(--cor-vinho-escuro);
+  border-color: var(--cor-vinho-claro);
+  transform: translateY(-2px);
+}
+
+.view a svg,
+.code a svg {
+  font-size: var(--f2);
+}
+
+/* Responsividade */
+@media screen and (max-width: 1000px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .image {
+    height: 250px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .projetos {
+    padding: 30px 15px;
+  }
+
+  .layout {
+    padding: 15px;
+  }
+
+  .tecnologias .tech-tag {
+    font-size: var(--f0);
+    padding: 6px 12px;
+  }
+
+  .view a,
+  .code a {
+    padding: 12px 18px;
+    font-size: var(--f0);
+  }
 }
