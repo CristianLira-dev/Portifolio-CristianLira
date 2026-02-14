@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   background-color: var(--cor-preto);
+  padding: 0 0 5rem 0;
 }
 
 .splineWrapper {
@@ -148,4 +149,10 @@ ul{
 
 .buttonWrapper {
   margin-top: 2rem;
+}
+
+@media (max-width: 500px) {
+  .content p {
+    padding: 0 0.5rem;
+  }
 }
