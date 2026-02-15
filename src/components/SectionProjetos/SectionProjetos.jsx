@@ -1,8 +1,28 @@
 import styles from './SectionProjetos.module.css';
-import { FaGlobe, FaCode } from "react-icons/fa";
+import { FaGlobe, FaCode, FaHtml5, FaCss3Alt, FaJsSquare, FaPhp, FaReact, FaVuejs, FaSass, FaGitAlt } from "react-icons/fa";
+import { SiTailwindcss, SiBootstrap, SiThreedotjs, SiGreensock, SiMysql } from "react-icons/si";
+import nuxt from "../../assets/images/nuxt.png";
 import ProjectsData from "../../assets/data/projects.json"
 
 function SectionProjetos() {
+
+    const iconMap = {
+      "HTML": <FaHtml5 />,
+      "CSS": <FaCss3Alt />,
+      "JavaScript": <FaJsSquare />,
+      "PHP": <FaPhp />,
+      "React.js": <FaReact />,
+      "Vue.js": <FaVuejs />,
+      "TailwindCSS": <SiTailwindcss />,
+      "Bootstrap": <SiBootstrap />,
+      "SASS": <FaSass />,
+      "Three.js": <SiThreedotjs />,
+      "GSAP": <SiGreensock />,
+      "MySQL": <SiMysql />,
+      "Git": <FaGitAlt />,
+      "Nuxt.js": <img src={nuxt} alt="Nuxt.js" />
+    };
+
     return (
         <section className={styles.projetos} id="projects">
             <h2>Meus Projetos</h2>
@@ -21,9 +41,7 @@ function SectionProjetos() {
                 <h3>Tecnologias</h3>
                 <div className="tech-tags">
                   {project.tecnologias.map((tech, index) => (
-                    <span key={index} className="tech-tag">
-                      {tech}
-                    </span>
+                    <span key={index} className={tech}>{iconMap[tech]}</span>
                   ))}
                 </div>
               </div>
