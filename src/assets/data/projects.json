@@ -7,7 +7,7 @@
       "view" : "https://adotepatas.com",
       "description": "O AdotePatas tem como objetivo centralizar e organizar o processo de adoção de cães e gatos, oferecendo uma plataforma segura, confiável e de fácil acesso tanto para adotantes quanto para protetores, ONGs e abrigos de animais.",
       "img": "/mockups/adotepatas/adotepatas.png",
-      "tecnologias": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      "tecnologias": ["HTML", "CSS", "Bootstrap", "TailwindCSS", "JavaScript", "PHP", "MySQL"],
       "tipo": "Plataforma Web"
     }
   ]

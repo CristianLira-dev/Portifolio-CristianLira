@@ -95,31 +95,349 @@
   margin: 0;
 }
 
+/* SectionProjetos.module.css - Versão Estilizada */
+
 .tecnologias .techtags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
+  margin-top: 16px;
 }
 
 span.tecnologia {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 8px;
   font-family: var(--semibold);
   font-size: var(--f1);
   color: var(--cor-branco);
-  background-color: var(--cor-escuro-3);
-  padding: 8px 16px;
-  border-radius: 20px;
+  background: var(--cor-escuro-2);
+  padding: 10px 16px;
+  border-radius: 12px;
   border: 1px solid var(--cor-escuro-5);
   transition: all 0.3s var(--ease-fluid);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
 }
 
-span.CSS svg{
-  font-size: var(--f4);
-  color: blue;
+span.tecnologia:hover::before {
+  opacity: 1;
 }
 
+span.tecnologia svg {
+  font-size: var(--f3);
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+span.tecnologia p {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* --- Front-end Core --- */
+span.HTML {
+  color: var(--cor-html);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(227, 79, 38, 0.1) 100%);
+}
+
+span.HTML svg {
+  color: var(--cor-html);
+}
+
+span.CSS {
+  color: var(--cor-css);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(21, 114, 182, 0.1) 100%);
+}
+
+span.CSS svg {
+  color: var(--cor-css);
+}
+
+span.JavaScript {
+  color: var(--cor-javascript);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(247, 223, 30, 0.1) 100%);
+}
+
+span.JavaScript svg {
+  color: var(--cor-javascript);
+}
+
+
+span.TypeScript {
+  color: var(--cor-typescript);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(49, 120, 198, 0.1) 100%);
+}
+
+span.TypeScript svg {
+  color: var(--cor-typescript);
+}
+
+/* --- Frameworks & Libs JS --- */
+span.React {
+  color: var(--cor-react);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(97, 218, 251, 0.1) 100%);
+}
+
+span.React svg {
+  color: var(--cor-react);
+}
+
+span.Vue {
+  color: var(--cor-vue);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(79, 192, 141, 0.1) 100%);
+}
+
+span.Vue svg {
+  color: var(--cor-vue);
+}
+
+span.Angular {
+  color: var(--cor-angular);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(221, 0, 49, 0.1) 100%);
+}
+
+span.Angular svg {
+  color: var(--cor-angular);
+}
+
+span.NextJS,
+span.Nextjs {
+  color: var(--cor-branco);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-color: var(--cor-escuro-5);
+}
+
+span.NextJS svg,
+span.Nextjs svg {
+  color: var(--cor-branco);
+}
+
+span.Redux {
+  color: var(--cor-redux);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(118, 74, 188, 0.1) 100%);
+}
+
+span.Redux svg {
+  color: var(--cor-redux);
+}
+
+/* --- CSS Frameworks --- */
+span.Sass,
+span.SASS {
+  color: var(--cor-sass);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(204, 102, 153, 0.1) 100%);
+}
+
+span.Sass svg,
+span.SASS svg {
+  color: var(--cor-sass);
+}
+
+span.Tailwind,
+span.TailwindCSS {
+  color: var(--cor-tailwind);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(56, 178, 172, 0.1) 100%);
+}
+
+span.Tailwind svg,
+span.TailwindCSS svg {
+  color: var(--cor-tailwind);
+}
+
+span.Bootstrap {
+  color: var(--cor-bootstrap);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(121, 82, 179, 0.1) 100%);
+}
+
+span.Bootstrap svg {
+  color: var(--cor-bootstrap);
+}
+
+/* --- Back-end & Linguagens --- */
+span.NodeJS,
+span.Node {
+  color: var(--cor-nodejs);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(51, 153, 51, 0.1) 100%);
+}
+
+span.NodeJS svg,
+span.Node svg {
+  color: var(--cor-nodejs);
+}
+
+span.Python {
+  color: var(--cor-python);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(55, 118, 171, 0.1) 100%);
+}
+
+span.Python svg {
+  color: var(--cor-python);
+}
+
+span.Java {
+  color: var(--cor-java);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(0, 115, 150, 0.1) 100%);
+}
+
+span.Java svg {
+  color: var(--cor-java);
+}
+
+span.PHP {
+  color: var(--cor-php);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(119, 123, 180, 0.1) 100%);
+}
+
+span.PHP svg {
+  color: var(--cor-php);
+}
+
+span.Ruby {
+  color: var(--cor-ruby);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(204, 52, 45, 0.1) 100%);
+}
+
+span.Ruby svg {
+  color: var(--cor-ruby);
+}
+
+span.Go,
+span.Golang {
+  color: var(--cor-go);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(0, 173, 216, 0.1) 100%);
+}
+
+span.Go svg,
+span.Golang svg {
+  color: var(--cor-go);
+}
+
+/* --- Banco de Dados --- */
+span.MongoDB {
+  color: var(--cor-mongodb);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(71, 162, 72, 0.1) 100%);
+}
+
+span.MongoDB svg {
+  color: var(--cor-mongodb);
+}
+
+span.PostgreSQL {
+  color: var(--cor-postgresql);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(51, 103, 145, 0.1) 100%);
+}
+
+span.PostgreSQL svg {
+  color: var(--cor-postgresql);
+}
+
+span.MySQL {
+  color: var(--cor-mysql);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(68, 121, 161, 0.1) 100%);
+}
+
+span.MySQL svg {
+  color: var(--cor-mysql);
+}
+
+span.Firebase {
+  color: var(--cor-firebase);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(255, 202, 40, 0.1) 100%);
+}
+
+span.Firebase svg {
+  color: var(--cor-firebase);
+}
+
+span.Firebase p {
+  color: var(--cor-branco);
+}
+
+span.Redis {
+  color: var(--cor-redis);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(220, 56, 45, 0.1) 100%);
+}
+
+span.Redis svg {
+  color: var(--cor-redis);
+}
+
+/* --- Ferramentas & DevOps --- */
+span.Git {
+  color: var(--cor-git);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(240, 80, 50, 0.1) 100%);
+}
+
+span.Git svg {
+  color: var(--cor-git);
+}
+
+span.GitHub {
+  color: var(--cor-branco);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-color: var(--cor-escuro-5);
+}
+
+span.GitHub svg {
+  color: var(--cor-branco);
+}
+
+span.Docker {
+  color: var(--cor-docker);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(36, 150, 237, 0.1) 100%);
+}
+
+span.Docker svg {
+  color: var(--cor-docker);
+}
+
+span.AWS {
+  color: var(--cor-aws);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(255, 153, 0, 0.1) 100%);
+}
+
+span.AWS svg {
+  color: var(--cor-aws);
+}
+
+/* --- Design --- */
+span.Figma {
+  color: var(--cor-figma);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(242, 78, 30, 0.1) 100%);
+}
+
+span.Figma svg {
+  color: var(--cor-figma);
+}
+
+span.Photoshop {
+  color: var(--cor-photoshop);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(49, 168, 255, 0.1) 100%);
+}
+
+span.Photoshop svg {
+  color: var(--cor-photoshop);
+}
+
+/* Responsividade */
+@media screen and (max-width: 1000px) {
+  .tecnologias .techtags {
+    gap: 8px;
+  }
+  
+  span.tecnologia {
+    padding: 8px 12px;
+    gap: 6px;
+  }
+  
+  span.tecnologia svg {
+    font-size: var(--f2);
+  }
+}
 /* Botões */
 .buttons {
   display: flex;

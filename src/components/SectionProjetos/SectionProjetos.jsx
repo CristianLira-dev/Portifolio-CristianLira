@@ -53,13 +53,13 @@ function SectionProjetos() {
               </div>
               <div className={styles.buttons}>
                 <div className={styles.view}>
-                  <a href={project.view}>
+                  <a target="_blank" href={project.view}>
                     <FaGlobe />
                     Ver Projeto
                   </a>
                 </div>
                 <div className={styles.code}>
-                  <a href={project.code}>
+                  <a target="_blank" href={project.code}>
                     <FaCode />
                     Código
                   </a>
