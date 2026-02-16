@@ -24,8 +24,8 @@ function SectionProjetos() {
     };
 
     return (
-        <section className={styles.projetos} id="projects">
-            <h2>Meus Projetos</h2>
+      <section className={styles.projetos} id="projects">
+        <h2>Meus Projetos</h2>
         {ProjectsData.projects.map((project) => (
           <div key={project.id} className={styles.layout}>
             <div className={styles.image}>
@@ -39,9 +39,15 @@ function SectionProjetos() {
               <p className={styles.description}>{project.description}</p>
               <div className={styles.tecnologias}>
                 <h3>Tecnologias</h3>
-                <div className="tech-tags">
+                <div className={styles.techtags}>
                   {project.tecnologias.map((tech, index) => (
-                    <span key={index} className={tech}>{iconMap[tech]}</span>
+                    <span
+                      key={index}
+                      className={`${styles.tecnologia} ${styles[tech]}`}
+                    >
+                      {iconMap[tech]}
+                      <p>{tech}</p>
+                    </span>
                   ))}
                 </div>
               </div>
