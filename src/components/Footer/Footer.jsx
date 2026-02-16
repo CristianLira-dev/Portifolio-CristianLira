@@ -1,6 +1,7 @@
 import styles from "./Footer.module.css";
-import Logo from "../../assets/images/logo.png"
-import CV from "../../assets/curriculo/Cristian-Lira.pdf"
+import Logo from "../../assets/images/logo.png";
+import { useTranslation } from "react-i18next";
+import CV from "../../assets/curriculo/Cristian-Lira.pdf";
 import {
   FaGithub,
   FaLinkedin,
@@ -8,13 +9,13 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaPhone,
-  FaHeart,
-  FaCode,
 } from "react-icons/fa";
 import { SiReact, SiVuedotjs, SiNuxtdotjs, SiJavascript } from "react-icons/si";
 
 function Footer() {
   const anoAtual = new Date().getFullYear();
+
+  const { t } = useTranslation();
 
   return (
     <footer className={styles.footer}>
@@ -40,13 +41,12 @@ function Footer() {
                 </div>
                 <h3 className={styles.brandName}>Cristian Lira</h3>
               </div>
-              <p className={styles.brandDescription}>
-                Desenvolvedor Front-End | UI/UX Designer
-              </p>
+              <p className={styles.brandDescription}>{t("footer.title")}</p>
               <p className={styles.brandTagline}>
-                Construindo o futuro da web com{" "}
-                <span className={styles.highlight}>código</span> e{" "}
-                <span className={styles.highlight}>design</span>.
+                {t("footer.subtitle")}{" "}
+                <span className={styles.highlight}>
+                  {t("footer.style_text")}
+                </span>
               </p>
               <div className={styles.techStack}>
                 <div className={styles.techItem}>
@@ -71,31 +71,31 @@ function Footer() {
 
           {/* Coluna 2: Links Rápidos */}
           <div className={styles.footerColumn}>
-            <h4 className={styles.columnTitle}>Navegação</h4>
+            <h4 className={styles.columnTitle}>{t("footer.title_nav_0")}</h4>
             <ul className={styles.linkList}>
               <li>
                 <a href="#home" className={styles.footerLink}>
-                  Início
+                  {t("footer.subtitle_nav_0_0")}
                 </a>
               </li>
               <li>
                 <a href="#about" className={styles.footerLink}>
-                  Sobre Mim
+                  {t("footer.subtitle_nav_0_1")}
                 </a>
               </li>
               <li>
                 <a href="#skills" className={styles.footerLink}>
-                  Habilidades
+                  {t("footer.subtitle_nav_0_2")}
                 </a>
               </li>
               <li>
                 <a href="#projects" className={styles.footerLink}>
-                  Projetos
+                  {t("footer.subtitle_nav_0_3")}
                 </a>
               </li>
               <li>
                 <a href="#contact" className={styles.footerLink}>
-                  Contato
+                  {t("footer.subtitle_nav_0_4")}
                 </a>
               </li>
             </ul>
@@ -103,7 +103,7 @@ function Footer() {
 
           {/* Coluna 3: Contato */}
           <div className={styles.footerColumn}>
-            <h4 className={styles.columnTitle}>Entre em Contato</h4>
+            <h4 className={styles.columnTitle}>{t("footer.title_nav_1")}</h4>
             <ul className={styles.contactList}>
               <li className={styles.contactItem}>
                 <FaEnvelope className={styles.contactIcon} />
@@ -111,6 +111,7 @@ function Footer() {
                   href="mailto:cristianfilho2008@outlook.com"
                   target="_blank"
                   className={styles.contactLink}
+                  rel="noreferrer"
                 >
                   cristianfilho2008@outlook.com
                 </a>
@@ -121,6 +122,7 @@ function Footer() {
                   href="https://wa.me/+5513996873783"
                   target="_blank"
                   className={styles.contactLink}
+                  rel="noreferrer"
                 >
                   +55 (13) 99687-3783
                 </a>
@@ -128,7 +130,7 @@ function Footer() {
               <li className={styles.contactItem}>
                 <FaMapMarkerAlt className={styles.contactIcon} />
                 <span className={styles.contactText}>
-                  Praia Grande - SP, Brasil
+                  Praia Grande - SP, {t("footer.brasil")}
                 </span>
               </li>
             </ul>
@@ -136,9 +138,9 @@ function Footer() {
 
           {/* Coluna 4: Redes Sociais */}
           <div className={styles.footerColumn}>
-            <h4 className={styles.columnTitle}>Conecte-se Comigo</h4>
+            <h4 className={styles.columnTitle}>{t("footer.title_nav_2")}</h4>
             <p className={styles.socialDescription}>
-              Vamos construir algo incrível juntos!
+              {t("footer.subtitle_nav_2_0")}
             </p>
             <div className={styles.socialLinks}>
               <a
@@ -172,7 +174,7 @@ function Footer() {
 
             <div className={styles.downloadCV}>
               <a href={CV} download className={styles.cvButton}>
-                <span>Baixar CV</span>
+                <span>{t("footer.button")}</span>
                 <svg
                   className={styles.cvIcon}
                   width="20"
@@ -207,9 +209,7 @@ function Footer() {
         </div>
 
         <div className={styles.footerBottom}>
-          <p className={styles.copyright}>
-            © {anoAtual} Cristian Lira
-          </p>
+          <p className={styles.copyright}>© {anoAtual} Cristian Lira</p>
         </div>
       </div>
 

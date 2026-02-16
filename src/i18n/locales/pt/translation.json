@@ -35,5 +35,21 @@
     "language": "pt_BR",
     "language_URL": "/langs/pt_BR.js",
     "button": "Enviar Menssagem"
+  },
+  "footer": {
+    "title": "Desenvolvedor Front-End | UI/UX Designer",
+    "subtitle": "Construindo o futuro da web com",
+    "style_text": "código e design.",
+    "title_nav_0": "Navegação",
+    "subtitle_nav_0_0": "Início",
+    "subtitle_nav_0_1": "Sobre",
+    "subtitle_nav_0_2": "Habilidades",
+    "subtitle_nav_0_3": "Projetos",
+    "subtitle_nav_0_4": "Contato",
+    "title_nav_1": "Entre em Contato",
+    "brasil": "Brasil",
+    "title_nav_2": "Conecte-se Comigo",
+    "subtitle_nav_2_0": "Vamos construir algo incrível juntos!",
+    "button" : "Baixar CV"
   }
 }

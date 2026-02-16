@@ -4,13 +4,18 @@ import Nuxt from "../../assets/images/NuxtSobre.png";
 import { FaReact, FaVuejs } from "react-icons/fa";
 import Button from "../Button/Button";
 import { useTranslation } from "react-i18next";
+import CV from "../../assets/curriculo/Cristian-Lira.pdf";
 
 
 function SectionSobre() {
-      const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const mesAtual = new Date().getMonth();
   const anoAtual = new Date().getFullYear();
   const nascimento = 2008;
-  const idade = anoAtual - nascimento;
+  let idade = anoAtual - nascimento;
+  if (mesAtual === 0 || mesAtual === 1) {
+    idade--;
+  }
 
   return (
     <section
@@ -41,9 +46,9 @@ function SectionSobre() {
 
             <div className={styles.buttonsContainer}>
               <a
-                href="../../assets/Cristian-Lira.pdf"
+                href={CV}
                 className={styles.btnBaixar}
-                download="Cristian-Lira.pdf"
+                download
               >
                 {(t("about.button"))}
               </a>
