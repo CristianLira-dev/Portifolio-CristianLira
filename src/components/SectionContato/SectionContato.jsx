@@ -6,14 +6,21 @@ import { useTranslation } from "react-i18next";
 
 function SectionContato() {    
     const { t, i18n } = useTranslation();
-const valorLight = getComputedStyle(document.documentElement).getPropertyValue(
-  "--light",
-);
     const [texto, setTexto] = useState("")
 
 
     return (
       <section id="contact" className={styles.SectionContato}>
+              <svg
+                className={styles.svg}
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 160"
+              >
+                <path
+                  fill="#1c1f251"
+                  d="M0,64L34.3,66.7C68.6,69.5,137,74.5,206,66.7C274.3,58.5,343,37.5,411,34.7C480,32,549,48,617,50.7C685.7,53.5,754,42.5,823,50.7C891.4,58.5,960,85.5,1029,82.7C1097.1,80,1166,48,1234,40C1302.9,32,1371,48,1406,56L1440,64L1440,160L1405.7,160C1371.4,160,1303,160,1234,160C1165.7,160,1097,160,1029,160C960,160,891,160,823,160C754.3,160,686,160,617,160C548.6,160,480,160,411,160C342.9,160,274,160,206,160C137.1,160,69,160,34,160L0,160Z"
+                ></path>
+              </svg>
         <div className={styles.container}>
           <div className={styles.conteudo}>
             <h2 className={styles.titulo}>{t("contact.title")}</h2>

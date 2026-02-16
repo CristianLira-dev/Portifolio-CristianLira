@@ -23,7 +23,8 @@ function SectionProjetos() {
       "Nuxt.js": <img src={nuxt} alt="Nuxt.js" />
     };
 
-    return (
+  return (
+      
       <section className={styles.projetos} id="projects">
         <h2>Meus Projetos</h2>
         {ProjectsData.projects.map((project) => (
