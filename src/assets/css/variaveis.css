@@ -39,7 +39,57 @@
   --cor-vermelho-escuro: #331218;
   --cor-vermelho-escuro-2: #4a1821;
 
+  /* --- Front-end Core --- */
+  --cor-html: #E34F26;
+  --cor-css: #1572B6;
+  --cor-javascript: #F7DF1E; /* Amarelo JS */
+  --cor-typescript: #3178C6;
+
+  /* --- Frameworks & Libs JS --- */
+  --cor-react: #61DAFB;
+  --cor-vue: #4FC08D;
+  --cor-angular: #DD0031;
+  --cor-svelte: #FF3E00;
+  --cor-nextjs: #000000; /* Ou #FFFFFF se o fundo for escuro */
+  --cor-jquery: #0769AD;
+  --cor-redux: #764ABC;
+
+  /* --- CSS Frameworks --- */
+  --cor-sass: #CC6699;
+  --cor-less: #1D365D;
+  --cor-tailwind: #38B2AC;
+  --cor-bootstrap: #7952B3;
+  --cor-styledcomponents: #DB7093;
+
+  /* --- Back-end & Linguagens --- */
+  --cor-nodejs: #339933;
+  --cor-python: #3776AB;
+  --cor-java: #007396;
+  --cor-csharp: #512BD4; /* C# roxo */
+  --cor-php: #777BB4;
+  --cor-ruby: #CC342D;
+  --cor-go: #00ADD8;
+  --cor-rust: #000000; /* Rust é preto/branco, ou laranja #DEA584 */
   
+  /* --- Banco de Dados --- */
+  --cor-mongodb: #47A248;
+  --cor-postgresql: #336791;
+  --cor-mysql: #4479A1;
+  --cor-firebase: #FFCA28;
+  --cor-redis: #DC382D;
+  --cor-sqlite: #003B57;
+
+  /* --- Ferramentas & DevOps --- */
+  --cor-git: #F05032;
+  --cor-github: #181717;
+  --cor-gitlab: #FC6D26;
+  --cor-docker: #2496ED;
+  --cor-aws: #FF9900;
+  --cor-linux: #FCC624;
+  
+  /* --- Design --- */
+  --cor-figma: #F24E1E;
+  --cor-photoshop: #31A8FF;
 
   --cor-laranja: #ffb12b;
   --cor-laranja-escuro: #36170c;
