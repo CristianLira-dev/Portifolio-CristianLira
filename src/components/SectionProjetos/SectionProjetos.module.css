@@ -256,13 +256,13 @@ span.Bootstrap svg {
 }
 
 /* --- Back-end & Linguagens --- */
-span.NodeJS,
+span.Node,
 span.Node {
   color: var(--cor-nodejs);
   background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(51, 153, 51, 0.1) 100%);
 }
 
-span.NodeJS svg,
+span.Node svg,
 span.Node svg {
   color: var(--cor-nodejs);
 }
@@ -309,10 +309,6 @@ span.Golang {
   background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(0, 173, 216, 0.1) 100%);
 }
 
-span.Go svg,
-span.Golang svg {
-  color: var(--cor-go);
-}
 
 /* --- Banco de Dados --- */
 span.MongoDB {
