@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 
 function SectionContato() {    
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const [texto, setTexto] = useState("")
 
 

@@ -8,7 +8,7 @@ import CV from "../../assets/curriculo/Cristian-Lira.pdf";
 
 
 function SectionSobre() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const mesAtual = new Date().getMonth();
   const anoAtual = new Date().getFullYear();
   const nascimento = 2008;

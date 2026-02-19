@@ -9,7 +9,9 @@ import Button from "../Button/Button.jsx";
 function SectionHero() {
   const canvasRef = useRef(null);
   const splineInstance = useRef(null);
-    const { t, i18n } = useTranslation();
+  const style_name_0 = "<";
+  const style_name_1 = "/>";
+    const { t } = useTranslation();
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -41,7 +43,9 @@ function SectionHero() {
       </div>
 
       <div className={styles.content}>
-        <h1>Cristian Lira</h1>
+        <div className={styles.name}>
+        <span>{style_name_0}</span><h1>Cristian Lira</h1> <span>{style_name_1}</span>
+        </div>
         <p>
           {t("hero.title")}{" "}
           <span className={styles.gradientText}>{t("hero.style_text")}</span>

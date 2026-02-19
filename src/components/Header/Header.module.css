@@ -102,7 +102,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: 0.25s;
+  transition: 0.3s;
   min-width: 120px;
   max-width: 100%;
   overflow: hidden;

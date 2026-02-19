@@ -45,6 +45,19 @@
   color: var(--cor-azul); /* Use suas novas variáveis! */
 }
 
+.name{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.name span{
+  font-size: var(--f4);
+  font-family: var(--bold);
+  color: var(--cor-azul-claro);
+}
+
 .content h1 {
   font-size: var(--f7);
   font-family: var(--bold);
