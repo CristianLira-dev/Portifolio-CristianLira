@@ -51,5 +51,18 @@
     "title_nav_2": "Conéctate Conmigo",
     "subtitle_nav_2_0": "¡Construyamos algo increíble juntos!",
     "button": "Descargar CV"
+  },
+  "skills": {
+    "title": "Mis Habilidades y Competencias",
+    "subtitle": "Stack técnico completo y habilidades blandas esenciales para entregar",
+    "subtitle_highlight": " soluciones de alta calidad",
+    "tab_hard": "Hard Skills",
+    "tab_soft": "Soft Skills"
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "technologies": "Tecnologías",
+    "view_project": "Ver Proyecto",
+    "code": "Código"
   }
 }

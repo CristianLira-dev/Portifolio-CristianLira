@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import styles from "./SectionHabilidades.module.css";
-import hardSkillsData from "../../assets/data/hardSkills.json";
-import softSkillsData from "../../assets/data/softSkills.json";
+import hardSkillsPt from "../../assets/data/hardSkills.json";
+import hardSkillsEn from "../../assets/data/hardSkills.en.json";
+import hardSkillsEs from "../../assets/data/hardSkills.es.json";
+import softSkillsPt from "../../assets/data/softSkills.json";
+import softSkillsEn from "../../assets/data/softSkills.en.json";
+import softSkillsEs from "../../assets/data/softSkills.es.json";
 import figma from "../../assets/images/figma.png";
 import nuxt from "../../assets/images/nuxt.png";
 import pinia from "../../assets/images/pinia.png";
 import vite from "../../assets/images/vite.png";
 import vercel from "../../assets/images/vercel.png";
 
-// Importar ícones do react-icons
 import {
   FaHtml5,
   FaCss3Alt,
@@ -44,65 +48,77 @@ import {
 import { TbApi } from "react-icons/tb";
 
 function SectionHabilidades() {
+  const { t, i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState("hard");
 
-  // Mapeamento de ícones para Hard Skills
   const hardSkillIcons = {
-    "HTML5": { icon: <FaHtml5 />, class: "html5" },
-    "CSS3": { icon: <FaCss3Alt />, class: "css3" },
-    "JavaScript": { icon: <FaJsSquare />, class: "javascript" },
-    "PHP": { icon: <FaPhp />, class: "php" },
+    HTML5: { icon: <FaHtml5 />, class: "html5" },
+    CSS3: { icon: <FaCss3Alt />, class: "css3" },
+    JavaScript: { icon: <FaJsSquare />, class: "javascript" },
+    PHP: { icon: <FaPhp />, class: "php" },
     "React.js": { icon: <FaReact />, class: "react" },
     "Vue.js": { icon: <FaVuejs />, class: "vue" },
     "Nuxt.js": { icon: <img src={nuxt} alt="Nuxt.js" />, class: "nuxt" },
-    "TailwindCSS": { icon: <SiTailwindcss />, class: "tailwind" },
-    "Bootstrap": { icon: <SiBootstrap />, class: "bootstrap" },
-    "SASS": { icon: <FaSass />, class: "sass" },
-    "Figma": { icon: <img src={figma} alt="Figma" />, class: "figma" },
+    TailwindCSS: { icon: <SiTailwindcss />, class: "tailwind" },
+    Bootstrap: { icon: <SiBootstrap />, class: "bootstrap" },
+    SASS: { icon: <FaSass />, class: "sass" },
+    Figma: { icon: <img src={figma} alt="Figma" />, class: "figma" },
     "Pinia (Vue/Nuxt)": { icon: <img src={pinia} alt="Pinia" />, class: "pinia" },
     "Context API (React)": { icon: <FaReact />, class: "context" },
     "Three.js (3D)": { icon: <SiThreedotjs />, class: "threejs" },
-    "GSAP": { icon: <SiGreensock />, class: "gsap" },
-    "MySQL": { icon: <SiMysql />, class: "mysql" },
+    GSAP: { icon: <SiGreensock />, class: "gsap" },
+    MySQL: { icon: <SiMysql />, class: "mysql" },
     "API REST": { icon: <TbApi />, class: "api" },
-    "Axios": { icon: <TbApi />, class: "axios" },
-    "Git": { icon: <FaGitAlt />, class: "git" },
-    "Vite": { icon: <img src={vite} alt="Vite" />, class: "vite" },
+    Axios: { icon: <TbApi />, class: "axios" },
+    Git: { icon: <FaGitAlt />, class: "git" },
+    Vite: { icon: <img src={vite} alt="Vite" />, class: "vite" },
     "Vercel (Deploy)": { icon: <img src={vercel} alt="Vercel" />, class: "vercel" },
   };
 
-  // Mapeamento de ícones para Soft Skills
   const softSkillIcons = {
-    "communication": <FaComments />,
+    communication: <FaComments />,
     "problem-solving": <FaLightbulb />,
     "critical-thinking": <FaBrain />,
-    "collaboration": <FaUsers />,
-    "adaptability": <FaRocket />,
-    "organization": <FaTasks />,
+    collaboration: <FaUsers />,
+    adaptability: <FaRocket />,
+    organization: <FaTasks />,
     "attention-detail": <FaEye />,
     "continuous-learning": <FaBook />,
-    "creativity": <FaPaintBrush />,
+    creativity: <FaPaintBrush />,
     "time-management": <FaClock />,
   };
 
-  // Mapeamento de ícones para Hard Skills
   const hardSkillIconsCard = {
-    "base": <FaCode />,
-    "brain": <FaBrain />,
-    "design": <FaPaintBrush />,
-    "hook": <FaTools />,
-    "animation": <FaMedal />,
-    "code": <FaLayerGroup />,
-    "DevOps": <FaGlobe />,
+    base: <FaCode />,
+    brain: <FaBrain />,
+    design: <FaPaintBrush />,
+    hook: <FaTools />,
+    animation: <FaMedal />,
+    code: <FaLayerGroup />,
+    DevOps: <FaGlobe />,
   };
+
+  const languageCode = i18n.resolvedLanguage?.split("-")[0] || "en";
+
+  const hardSkillsData = useMemo(() => {
+    if (languageCode === "pt") return hardSkillsPt;
+    if (languageCode === "es") return hardSkillsEs;
+    return hardSkillsEn;
+  }, [languageCode]);
+
+  const softSkillsData = useMemo(() => {
+    if (languageCode === "pt") return softSkillsPt;
+    if (languageCode === "es") return softSkillsEs;
+    return softSkillsEn;
+  }, [languageCode]);
 
   return (
     <section id="skills" className={styles.habilidades}>
       <div className={styles.titulo}>
-        <h2>Minhas Habilidades & Competências</h2>
+        <h2>{t("skills.title")}</h2>
         <p>
-          Stack técnica completa e soft skills essenciais para entregar
-          <span className={styles.destaque}> soluções de alta qualidade</span>
+          {t("skills.subtitle")}
+          <span className={styles.destaque}>{t("skills.subtitle_highlight")}</span>
         </p>
       </div>
 
@@ -111,13 +127,13 @@ function SectionHabilidades() {
           className={`${styles.tab} ${activeTab === "hard" ? styles.tabActive : ""}`}
           onClick={() => setActiveTab("hard")}
         >
-          Hard Skills
+          {t("skills.tab_hard")}
         </button>
         <button
           className={`${styles.tab} ${activeTab === "soft" ? styles.tabActive : ""}`}
           onClick={() => setActiveTab("soft")}
         >
-          Soft Skills
+          {t("skills.tab_soft")}
         </button>
       </div>
 
@@ -129,10 +145,7 @@ function SectionHabilidades() {
               className={`${styles.card} ${styles[category.size]}`}
               style={{ background: category.gradient }}
             >
-              <div
-                className={styles.cardIcon}
-                style={{ color: category.iconColor }}
-              >
+              <div className={styles.cardIcon} style={{ color: category.iconColor }}>
                 {hardSkillIconsCard[category.icon] || <FaTools />}
               </div>
               <div className={styles.cardContent}>
@@ -169,16 +182,12 @@ function SectionHabilidades() {
               className={`${styles.card} ${styles.softSkillCard}`}
               style={{ background: skill.gradient }}
             >
-              <div
-                className={styles.cardIcon}
-                style={{ color: skill.iconColor }}
-              >
+              <div className={styles.cardIcon} style={{ color: skill.iconColor }}>
                 {softSkillIcons[skill.id]}
               </div>
               <div className={styles.cardContent}>
                 <h3>{skill.title}</h3>
                 <p className={styles.cardDescription}>{skill.description}</p>
-                <span className={styles.skillLevel}>{skill.level}</span>
               </div>
             </div>
           ))}

@@ -12,7 +12,7 @@
     "style_text": "código e design.",
     "subtitle": "Desenvolvedor Front-End | UI/UX Designer",
     "button_projects": "Explorar Projetos"
-},
+  },
   "about": {
     "title": "Sobre Mim",
     "description_1": "Olá! Meu nome é ",
@@ -23,7 +23,7 @@
     "description_2_3": "sempre aplicando boas práticas de arquitetura, SEO, SSR e Clean Code. Mais do que dominar a sintaxe, entendo como conectar o Front-End ao mundo real, consumindo",
     "description_2_4": "e integrando sistemas complexos tendo experiência com PHP e MySQL.",
     "description_3": "Estou sempre em busca do próximo nível, sempre buscando o estudo em novas tecnologias e aprimorando minhas habilidades para entregar soluções cada vez melhores.",
-    "button" : "Baixar CV"
+    "button": "Baixar CV"
   },
   "contact": {
     "title": "Entre em Contato",
@@ -50,6 +50,19 @@
     "brasil": "Brasil",
     "title_nav_2": "Conecte-se Comigo",
     "subtitle_nav_2_0": "Vamos construir algo incrível juntos!",
-    "button" : "Baixar CV"
+    "button": "Baixar CV"
+  },
+  "skills": {
+    "title": "Minhas Habilidades & Competências",
+    "subtitle": "Stack técnica completa e soft skills essenciais para entregar",
+    "subtitle_highlight": " soluções de alta qualidade",
+    "tab_hard": "Hard Skills",
+    "tab_soft": "Soft Skills"
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "technologies": "Tecnologias",
+    "view_project": "Ver Projeto",
+    "code": "Código"
   }
 }

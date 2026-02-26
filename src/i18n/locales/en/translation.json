@@ -51,5 +51,18 @@
     "title_nav_2": "Connect with Me",
     "subtitle_nav_2_0": "Let's build something amazing together!",
     "button": "Download CV"
+  },
+  "skills": {
+    "title": "My Skills & Competencies",
+    "subtitle": "Complete technical stack and essential soft skills to deliver",
+    "subtitle_highlight": " high-quality solutions",
+    "tab_hard": "Hard Skills",
+    "tab_soft": "Soft Skills"
+  },
+  "projects": {
+    "title": "My Projects",
+    "technologies": "Technologies",
+    "view_project": "View Project",
+    "code": "Code"
   }
 }
