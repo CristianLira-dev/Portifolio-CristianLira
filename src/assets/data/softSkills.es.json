@@ -1,0 +1,84 @@
+{
+  "skills": [
+    {
+      "id": "communication",
+      "title": "Comunicación Efectiva",
+      "description": "Capacidad de explicar conceptos técnicos de forma clara para diferentes públicos",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #2d4a3e)",
+      "iconColor": "#10b981",
+      "icon": null
+    },
+    {
+      "id": "problem-solving",
+      "title": "Resolución de Problemas",
+      "description": "Enfoque analítico y creativo para desafíos complejos de desarrollo",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #4a1d4a)",
+      "iconColor": "#a855f7",
+      "icon": null
+    },
+    {
+      "id": "critical-thinking",
+      "title": "Pensamiento Crítico",
+      "description": "Análisis profundo de requisitos y toma de decisiones fundamentadas",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #1e3a5f)",
+      "iconColor": "#3b82f6",
+      "icon": null
+    },
+    {
+      "id": "collaboration",
+      "title": "Colaboración en Equipo",
+      "description": "Trabajo efectivo en entornos ágiles y multidisciplinarios",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #4a2d1e)",
+      "iconColor": "#f59e0b",
+      "icon": null
+    },
+    {
+      "id": "adaptability",
+      "title": "Adaptabilidad",
+      "description": "Rápida asimilación de nuevas tecnologías y metodologías",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #2d4a4a)",
+      "iconColor": "#06b6d4",
+      "icon": null
+    },
+    {
+      "id": "organization",
+      "title": "Organización y Planificación",
+      "description": "Gestión eficiente de tiempo, prioridades y entregas",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #4a1d2d)",
+      "iconColor": "#ec4899",
+      "icon": null
+    },
+    {
+      "id": "attention-detail",
+      "title": "Atención al Detalle",
+      "description": "Enfoque en calidad de código y UI pixel-perfect",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #3e4a1d)",
+      "iconColor": "#84cc16",
+      "icon": null
+    },
+    {
+      "id": "continuous-learning",
+      "title": "Aprendizaje Continuo",
+      "description": "Búsqueda constante de evolución técnica y actualización profesional",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #4a3d1e)",
+      "iconColor": "#eab308",
+      "icon": null
+    },
+    {
+      "id": "creativity",
+      "title": "Creatividad e Innovación",
+      "description": "Propuesta de soluciones creativas e interfaces diferenciadas",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #4a2d3e)",
+      "iconColor": "#f472b6",
+      "icon": null
+    },
+    {
+      "id": "time-management",
+      "title": "Gestión del Tiempo",
+      "description": "Cumplimiento de plazos sin comprometer la calidad",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #1e4a3a)",
+      "iconColor": "#14b8a6",
+      "icon": null
+    }
+  ]
+}

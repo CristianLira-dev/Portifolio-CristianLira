@@ -1,0 +1,84 @@
+{
+  "skills": [
+    {
+      "id": "communication",
+      "title": "Effective Communication",
+      "description": "Ability to explain technical concepts clearly to different audiences",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #2d4a3e)",
+      "iconColor": "#10b981",
+      "icon": null
+    },
+    {
+      "id": "problem-solving",
+      "title": "Problem Solving",
+      "description": "Analytical and creative approach to complex development challenges",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #4a1d4a)",
+      "iconColor": "#a855f7",
+      "icon": null
+    },
+    {
+      "id": "critical-thinking",
+      "title": "Critical Thinking",
+      "description": "Deep requirement analysis and well-founded decision-making",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #1e3a5f)",
+      "iconColor": "#3b82f6",
+      "icon": null
+    },
+    {
+      "id": "collaboration",
+      "title": "Team Collaboration",
+      "description": "Effective work in agile and multidisciplinary environments",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #4a2d1e)",
+      "iconColor": "#f59e0b",
+      "icon": null
+    },
+    {
+      "id": "adaptability",
+      "title": "Adaptability",
+      "description": "Quick assimilation of new technologies and methodologies",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #2d4a4a)",
+      "iconColor": "#06b6d4",
+      "icon": null
+    },
+    {
+      "id": "organization",
+      "title": "Organization & Planning",
+      "description": "Efficient management of time, priorities, and deliveries",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #4a1d2d)",
+      "iconColor": "#ec4899",
+      "icon": null
+    },
+    {
+      "id": "attention-detail",
+      "title": "Attention to Detail",
+      "description": "Focus on code quality and pixel-perfect UI",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #3e4a1d)",
+      "iconColor": "#84cc16",
+      "icon": null
+    },
+    {
+      "id": "continuous-learning",
+      "title": "Continuous Learning",
+      "description": "Constant pursuit of technical growth and professional development",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #4a3d1e)",
+      "iconColor": "#eab308",
+      "icon": null
+    },
+    {
+      "id": "creativity",
+      "title": "Creativity & Innovation",
+      "description": "Proposition of creative solutions and differentiated interfaces",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #4a2d3e)",
+      "iconColor": "#f472b6",
+      "icon": null
+    },
+    {
+      "id": "time-management",
+      "title": "Time Management",
+      "description": "Meeting deadlines without compromising quality",
+      "gradient": "linear-gradient(135deg, #1a1a1a 60%, #1e4a3a)",
+      "iconColor": "#14b8a6",
+      "icon": null
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Adote Patas",
+      "code": "https://github.com/Diogo013/TCC-AdotePatas",
+      "view": "https://adotepatas.com",
+      "description": "AdotePatas tiene como objetivo centralizar y organizar el proceso de adopción de perros y gatos, ofreciendo una plataforma segura, confiable y de fácil acceso tanto para adoptantes como para rescatistas, ONG y refugios de animales.",
+      "img": "/mockups/adotepatas/adotepatas.png",
+      "tecnologias": [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "TailwindCSS",
+        "JavaScript",
+        "PHP",
+        "MySQL"
+      ],
+      "tipo": "Plataforma Web"
+    }
+  ]
+}
