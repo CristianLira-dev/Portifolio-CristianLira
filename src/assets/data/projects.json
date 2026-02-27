@@ -4,11 +4,21 @@
       "id": 1,
       "title": "Adote Patas",
       "code" : "https://github.com/Diogo013/TCC-AdotePatas",
-      "view" : "https://adotepatas.com",
+      "view" : "https://adotepatas.page.gd/",
       "description": "O AdotePatas tem como objetivo centralizar e organizar o processo de adoção de cães e gatos, oferecendo uma plataforma segura, confiável e de fácil acesso tanto para adotantes quanto para protetores, ONGs e abrigos de animais.",
       "img": "/mockups/adotepatas/adotepatas.png",
-      "tecnologias": ["HTML", "CSS", "Bootstrap", "TailwindCSS", "JavaScript", "PHP", "MySQL"],
+      "tecnologias": ["HTML", "CSS", "Bootstrap", "TailwindCSS", "JavaScript", "PHP", "MySQL", "Git"],
       "tipo": "Plataforma Web"
+    },
+    {
+      "id": 2,
+      "title": "Task Flow",
+      "code" : "https://github.com/CristianLira-dev/TaskFlow-Kanban",
+      "view" : "https://task-flow-kanban-tau.vercel.app/",
+      "description": "O Gerenciador de Tarefas tem como objetivo centralizar e organizar o processo de gerenciamento de tarefas, oferecendo uma plataforma segura, confiável e de fácil acesso tanto para usuários quanto para administradores.",
+        "img": "/mockups/adotepatas/adotepatas.png",
+      "tecnologias": ["Nuxt", "Vue", "SASS", "Three.js", "JavaScript", "Pinia", "MySQL", "Git"],
+      "tipo": "Gerenciador de Tarefas"
     }
   ]
 }

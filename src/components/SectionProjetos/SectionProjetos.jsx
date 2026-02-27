@@ -34,7 +34,7 @@ function SectionProjetos() {
     JavaScript: <FaJsSquare />,
     PHP: <FaPhp />,
     "React.js": <FaReact />,
-    "Vue.js": <FaVuejs />,
+    "Vue": <FaVuejs />,
     TailwindCSS: <SiTailwindcss />,
     Bootstrap: <SiBootstrap />,
     SASS: <FaSass />,
@@ -42,7 +42,7 @@ function SectionProjetos() {
     GSAP: <SiGreensock />,
     MySQL: <SiMysql />,
     Git: <FaGitAlt />,
-    "Nuxt.js": <img src={nuxt} alt="Nuxt.js" />,
+    "Nuxt": <img src={nuxt} alt="Nuxt.js" />,
   };
 
   const languageCode = i18n.resolvedLanguage?.split("-")[0] || "en";
@@ -68,7 +68,7 @@ function SectionProjetos() {
             </div>
             <p className={styles.description}>{project.description}</p>
             <div className={styles.tecnologias}>
-              <h3>{t("projects.technologies")}</h3>
+              <h3>{t("projects.technologies")}:</h3>
               <div className={styles.techtags}>
                 {project.tecnologias.map((tech, index) => (
                   <span key={index} className={`${styles.tecnologia} ${styles[tech]}`}>
