@@ -7,15 +7,14 @@
   width: calc(100% - 40px);
   max-width: 1200px;
   position: fixed;
-  top: 20px;
+  top: 0px;
   left: 50%;
   transform: translateX(-50%);
   height: auto;
   min-height: 60px;
-  border-radius: 100px;
+  border-radius: 0 0 20px 20px;
   padding: 8px 16px;
-  background-color: var(--cor-escuro-3-transparente);
-  backdrop-filter: blur(10px);
+  background-color: var(--cor-escuro-3);
   z-index: 100;
   gap: 8px;
   flex-wrap: wrap;
@@ -182,7 +181,6 @@
 @media (max-width: 1000px) {
   .SectionHeader {
     max-width: 960px;
-    top: 14px;
   }
   
   .Nav ul {
@@ -204,7 +202,6 @@
   .SectionHeader {
     width: calc(100% - 24px);
     padding: 10px 12px;
-    border-radius: 14px;
   }
   
   .LanguageContainer {
@@ -251,4 +248,28 @@
       .Nav ul li a {
     font-size: calc(var(--f1) - 1px);
   }
+}
+
+/* SVG positioning outside header scope */
+.headerEsquerdo {
+  position: fixed;
+  left: -20px;
+  top: 10px;
+  transform: translateY(-50%);
+  z-index: 99;
+  height: auto;
+  width: 20px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.headerDireito {
+  position: fixed;
+  right: -20px;
+  top: 10px;
+  transform: translateY(-50%);
+  z-index: 99;
+  height: auto;
+  width: 20px;
+  pointer-events: none;
 }

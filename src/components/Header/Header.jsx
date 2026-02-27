@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import logoCristian from "../../assets/images/logo.png";
+import svgDireito from "../../assets/images/cantoDireito.png";
+import svgEsquerdo from "../../assets/images/cantoEsquerdo.png";
 
 
 function Header() {
@@ -28,6 +30,8 @@ const languages = [
 
     return (
       <header className={styles.SectionHeader}>
+      <img src={svgEsquerdo}className={styles.headerEsquerdo} />
+      <img src={svgDireito} className={styles.headerDireito} />
         <div className={styles.Logo}>
           <img src={logoCristian} alt="Logo de Cristian Lira" />
           <strong>Cristian</strong><p>Lira</p>
