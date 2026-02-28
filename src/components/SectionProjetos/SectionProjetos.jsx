@@ -24,6 +24,7 @@ import nuxt from "../../assets/images/nuxt.png";
 import projectsPt from "../../assets/data/projects.json";
 import projectsEn from "../../assets/data/projects.en.json";
 import projectsEs from "../../assets/data/projects.es.json";
+import pinia from "../../assets/images/pinia.png";  
 
 function SectionProjetos() {
   const { t, i18n } = useTranslation();
@@ -43,6 +44,7 @@ function SectionProjetos() {
     MySQL: <SiMysql />,
     Git: <FaGitAlt />,
     "Nuxt": <img src={nuxt} alt="Nuxt.js" />,
+    "Pinia": <img src={pinia} alt="Pinia" />,
   };
 
   const languageCode = i18n.resolvedLanguage?.split("-")[0] || "en";

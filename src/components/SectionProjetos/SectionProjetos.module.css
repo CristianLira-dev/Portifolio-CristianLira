@@ -129,6 +129,12 @@ span.tecnologia svg {
   flex-shrink: 0;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
+span.tecnologia img {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
 
 span.tecnologia p {
   margin: 0;
@@ -155,15 +161,15 @@ span.CSS svg {
   color: var(--cor-css);
 }
 
-span.JavaScript {
+span.JavaScript,
+span.Pinia {
   color: var(--cor-javascript);
   background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(247, 223, 30, 0.1) 100%);
 }
-
-span.JavaScript svg {
-  color: var(--cor-javascript);
+span.Nuxt {
+    color: var(--cor-vue);
+  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(79, 192, 141, 0.1) 100%);
 }
-
 
 span.TypeScript {
   color: var(--cor-typescript);
@@ -203,8 +209,9 @@ span.Angular svg {
 }
 
 span.NextJS,
-span.Nextjs {
-  color: var(--cor-branco);
+span.Nextjs
+span.Three.js {
+  color: var(--cor-rosa);
   background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(255, 255, 255, 0.05) 100%);
   border-color: var(--cor-escuro-5);
 }

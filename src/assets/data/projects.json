@@ -16,7 +16,7 @@
       "code" : "https://github.com/CristianLira-dev/TaskFlow-Kanban",
       "view" : "https://task-flow-kanban-tau.vercel.app/",
       "description": "O Gerenciador de Tarefas tem como objetivo centralizar e organizar o processo de gerenciamento de tarefas, oferecendo uma plataforma segura, confiável e de fácil acesso tanto para usuários quanto para administradores.",
-        "img": "/mockups/adotepatas/adotepatas.png",
+        "img": "/mockups/taskflow/taskflow.png",
       "tecnologias": ["Nuxt", "Vue", "SASS", "Three.js", "JavaScript", "Pinia", "MySQL", "Git"],
       "tipo": "Gerenciador de Tarefas"
     }
