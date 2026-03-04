@@ -18,7 +18,6 @@
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  margin: 0 0 100px 0;
 }
 
 .title {
@@ -79,7 +78,7 @@ strong {
 .buttonsContainer {
   display: flex;
   gap: 1rem;
-  margin: 0 0 1rem 0;
+  margin: 0 0 80px 0;
 }
 
 .btnBaixar {

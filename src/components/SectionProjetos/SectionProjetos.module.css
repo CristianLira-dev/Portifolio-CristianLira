@@ -9,6 +9,7 @@
   padding: 50px 20px;
   background-color: var(--cor-preto);
   gap: 40px;
+  scroll-margin-top: 50px;
 }
 
 .projetos h2 {

@@ -34,7 +34,7 @@ const languages = [
       <img src={svgDireito} className={styles.headerDireito} />
         <div className={styles.Logo}>
           <img src={logoCristian} alt="Logo de Cristian Lira" />
-          <strong>Cristian</strong><p>Lira</p>
+          <p>Cristian Lira</p>
         </div>
         <nav className={styles.Nav}>
           <ul>

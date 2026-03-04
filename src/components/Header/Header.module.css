@@ -27,15 +27,9 @@
   text-align: center;
 }
 
-.Logo strong {
-  font-family: var(--bold);
-  font-size: var(--f2);
-  color: var(--cor-branco);
-}
-
 .Logo p {
-  font-family: var(--semibold);
-  font-size: var(--f2);
+  font-family: var(--bold);
+  font-size: calc(var(--f2) + 2px);
   color: var(--cor-branco);
   margin-left: 5px;
 }
