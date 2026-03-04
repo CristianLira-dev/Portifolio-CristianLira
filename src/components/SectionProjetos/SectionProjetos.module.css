@@ -102,8 +102,7 @@
 .tecnologias .techtags {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 16px;
+  margin: 10px 0 20px 0;
 }
 
 span.tecnologia {
@@ -111,28 +110,24 @@ span.tecnologia {
   flex-direction: row;
   align-items: center;
   gap: 8px;
-  font-family: var(--semibold);
-  font-size: var(--f1);
+  font-family: var(--light);
+  font-size: var(--f0);
   color: var(--cor-branco);
-  background: var(--cor-escuro-2);
-  padding: 10px 16px;
-  border-radius: 12px;
-  border: 1px solid var(--cor-escuro-5);
+  margin: 0 20px 10px 0;
   transition: all 0.3s var(--ease-fluid);
-  cursor: default;
   position: relative;
   overflow: hidden;
 }
 
 
 span.tecnologia svg {
-  font-size: var(--f4);
+  font-size: calc(var(--f2) + 2px);
   flex-shrink: 0;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 span.tecnologia img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
@@ -141,40 +136,28 @@ span.tecnologia p {
   margin: 0;
   font-weight: 600;
   letter-spacing: 0.3px;
+  color: var(--cor-branco);
 }
 
 /* --- Front-end Core --- */
-span.HTML {
-  color: var(--cor-html);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(227, 79, 38, 0.1) 100%);
-}
-
 span.HTML svg {
   color: var(--cor-html);
-}
-
-span.CSS {
-  color: var(--cor-css);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(21, 114, 182, 0.1) 100%);
 }
 
 span.CSS svg {
   color: var(--cor-css);
 }
 
-span.JavaScript,
-span.Pinia {
+span.Pinia svg {
   color: var(--cor-javascript);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(247, 223, 30, 0.1) 100%);
-}
-span.Nuxt {
-    color: var(--cor-vue);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(79, 192, 141, 0.1) 100%);
 }
 
-span.TypeScript {
-  color: var(--cor-typescript);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(49, 120, 198, 0.1) 100%);
+span.JavaScript svg {
+  color: var(--cor-javascript);
+}
+
+span.Nuxt svg {
+  color: var(--cor-vue);
 }
 
 span.TypeScript svg {
@@ -182,49 +165,22 @@ span.TypeScript svg {
 }
 
 /* --- Frameworks & Libs JS --- */
-span.React {
-  color: var(--cor-react);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(97, 218, 251, 0.1) 100%);
-}
-
 span.React svg {
   color: var(--cor-react);
-}
-
-span.Vue {
-  color: var(--cor-vue);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(79, 192, 141, 0.1) 100%);
 }
 
 span.Vue svg {
   color: var(--cor-vue);
 }
 
-span.Angular {
-  color: var(--cor-angular);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(221, 0, 49, 0.1) 100%);
-}
-
 span.Angular svg {
   color: var(--cor-angular);
 }
 
-span.NextJS,
-span.Nextjs
-span.Three.js {
-  color: var(--cor-rosa);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(255, 255, 255, 0.05) 100%);
-  border-color: var(--cor-escuro-5);
-}
-
 span.NextJS svg,
-span.Nextjs svg {
-  color: var(--cor-branco);
-}
-
-span.Redux {
-  color: var(--cor-redux);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(118, 74, 188, 0.1) 100%);
+span.Nextjs svg,
+span.Three.js svg {
+  color: var(--cor-rosa);
 }
 
 span.Redux svg {
@@ -232,21 +188,9 @@ span.Redux svg {
 }
 
 /* --- CSS Frameworks --- */
-span.Sass,
-span.SASS {
-  color: var(--cor-sass);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(204, 102, 153, 0.1) 100%);
-}
-
 span.Sass svg,
 span.SASS svg {
   color: var(--cor-sass);
-}
-
-span.Tailwind,
-span.TailwindCSS {
-  color: var(--cor-tailwind);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(56, 178, 172, 0.1) 100%);
 }
 
 span.Tailwind svg,
@@ -254,114 +198,52 @@ span.TailwindCSS svg {
   color: var(--cor-tailwind);
 }
 
-span.Bootstrap {
-  color: var(--cor-bootstrap);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(121, 82, 179, 0.1) 100%);
-}
-
 span.Bootstrap svg {
   color: var(--cor-bootstrap);
 }
 
 /* --- Back-end & Linguagens --- */
-span.Node,
-span.Node {
-  color: var(--cor-nodejs);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(51, 153, 51, 0.1) 100%);
-}
-
-span.Node svg,
 span.Node svg {
   color: var(--cor-nodejs);
-}
-
-span.Python {
-  color: var(--cor-python);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(55, 118, 171, 0.1) 100%);
 }
 
 span.Python svg {
   color: var(--cor-python);
 }
 
-span.Java {
-  color: var(--cor-java);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(0, 115, 150, 0.1) 100%);
-}
-
 span.Java svg {
   color: var(--cor-java);
-}
-
-span.PHP {
-  color: var(--cor-php);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(119, 123, 180, 0.1) 100%);
 }
 
 span.PHP svg {
   color: var(--cor-php);
 }
 
-span.Ruby {
-  color: var(--cor-ruby);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(204, 52, 45, 0.1) 100%);
-}
-
 span.Ruby svg {
   color: var(--cor-ruby);
 }
 
-span.Go,
-span.Golang {
+span.Go svg,
+span.Golang svg {
   color: var(--cor-go);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(0, 173, 216, 0.1) 100%);
 }
 
 
 /* --- Banco de Dados --- */
-span.MongoDB {
-  color: var(--cor-mongodb);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(71, 162, 72, 0.1) 100%);
-}
-
 span.MongoDB svg {
   color: var(--cor-mongodb);
-}
-
-span.PostgreSQL {
-  color: var(--cor-postgresql);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(51, 103, 145, 0.1) 100%);
 }
 
 span.PostgreSQL svg {
   color: var(--cor-postgresql);
 }
 
-span.MySQL {
-  color: var(--cor-mysql);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(68, 121, 161, 0.1) 100%);
-}
-
 span.MySQL svg {
   color: var(--cor-mysql);
 }
 
-span.Firebase {
-  color: var(--cor-firebase);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(255, 202, 40, 0.1) 100%);
-}
-
 span.Firebase svg {
   color: var(--cor-firebase);
-}
-
-span.Firebase p {
-  color: var(--cor-branco);
-}
-
-span.Redis {
-  color: var(--cor-redis);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(220, 56, 45, 0.1) 100%);
 }
 
 span.Redis svg {
@@ -369,37 +251,16 @@ span.Redis svg {
 }
 
 /* --- Ferramentas & DevOps --- */
-span.Git {
-  color: var(--cor-git);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(240, 80, 50, 0.1) 100%);
-}
-
 span.Git svg {
   color: var(--cor-git);
-}
-
-span.GitHub {
-  color: var(--cor-branco);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(255, 255, 255, 0.05) 100%);
-  border-color: var(--cor-escuro-5);
 }
 
 span.GitHub svg {
   color: var(--cor-branco);
 }
 
-span.Docker {
-  color: var(--cor-docker);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(36, 150, 237, 0.1) 100%);
-}
-
 span.Docker svg {
   color: var(--cor-docker);
-}
-
-span.AWS {
-  color: var(--cor-aws);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(255, 153, 0, 0.1) 100%);
 }
 
 span.AWS svg {
@@ -407,18 +268,8 @@ span.AWS svg {
 }
 
 /* --- Design --- */
-span.Figma {
-  color: var(--cor-figma);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(242, 78, 30, 0.1) 100%);
-}
-
 span.Figma svg {
   color: var(--cor-figma);
-}
-
-span.Photoshop {
-  color: var(--cor-photoshop);
-  background: linear-gradient(135deg, var(--cor-escuro-2) 0%, rgba(49, 168, 255, 0.1) 100%);
 }
 
 span.Photoshop svg {
@@ -465,19 +316,46 @@ span.Photoshop svg {
   text-decoration: none;
   transition: all 0.5s var(--ease-soft);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: solid 2px var(--cor-vinho-claro);
 }
 
 .view a {
-  background: linear-gradient(135deg, var(--cor-vinho-medio), var(--cor-vinho-claro));
   color: var(--cor-branco);
 }
 
+.view a::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500%;
+  height: 500%;
+  background: radial-gradient(circle, rgba(255, 105, 180, 0.4) 0%, transparent 20%);
+  transition: all 1s var(--ease-soft);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.view a:hover::before {
+  top: -400%;
+  box-shadow: inset 0 0 30px rgba(255, 105, 180, 0.2);
+}
+
+.view a > * {
+  position: relative;
+  z-index: 2;
+}
+
 .view a:hover {
-  background: linear-gradient(135deg, var(--cor-vinho-claro), var(--cor-vinho-medio));
   transform: translateY(-2px);
   color: var(--cor-branco);
-  box-shadow: 0 6px 20px rgba(184, 92, 131, 0.2);
-}
+  box-shadow: 
+  0 10px 40px rgba(184, 92, 131, 0.2), 
+  0 0 20px rgba(255, 105, 180, 0.15);}
 
 .code a {
   background: transparent;
@@ -486,15 +364,21 @@ span.Photoshop svg {
 }
 
 .code a:hover {
-  background-color: var(--cor-vinho-claro);
+  background-color: rgba(184, 92, 131, 0.05);
   border-color: var(--cor-vinho-claro);
   transform: translateY(-2px);
   color: var(--cor-branco);
+  box-shadow: 
+  0 10px 40px rgba(184, 92, 131, 0.2), 
+  0 0 20px rgba(255, 105, 180, 0.15);}
+
+.code a:hover::after {
+  opacity: 1;
 }
 
 .view a svg,
 .code a svg {
-  font-size: var(--f3);
+  font-size: var(--f2);
 }
 
 /* Responsividade */
