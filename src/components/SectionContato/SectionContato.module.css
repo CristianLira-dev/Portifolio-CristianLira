@@ -96,6 +96,17 @@
     display: none;
 }
 
+p.erro {
+    color: var(--cor-vermelho);
+    font-family: var(--light);
+    font-size: var(--f1);
+    margin: 0 5px;
+}
+
+.hide{
+    display: none;
+}
+
 
 .containerButton{
     display: flex;
