@@ -1,7 +1,8 @@
 import styles from "../SectionContato/SectionContato.module.css";
 import { Editor } from "@tinymce/tinymce-react";
 import { useTranslation } from "react-i18next";
-import {useForm, Controller} from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
+import validator from "validator";
 
 function SectionContato() {    
     const { t } = useTranslation();
@@ -36,13 +37,10 @@ function SectionContato() {
                 <input
                   type="email"
                   id="email"
-                  className={styles.input}
+                  className={errors?.email ? styles.inputErro : styles.input}
                   placeholder={t("contact.email_placeholder")}
                   {...register("email", {
-                    required: true, validate: (value) => {
-                      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                      return emailRegex.test(value) || "invalid";
-                  }})}
+                    required: true, validate: (value) => validator.isEmail(value)})}
                 />
                 {errors?.email?.type === "required" && (
                   <p id="erro-email" className={styles.erro}>
@@ -65,7 +63,7 @@ function SectionContato() {
                 <input
                   type="text"
                   id="assunto"
-                  className={styles.input}
+                  className={errors?.assunto ? styles.inputErro : styles.input}
                   placeholder={t("contact.assunto_placeholder")}
                   {...register("assunto", { required: true })}
                 />

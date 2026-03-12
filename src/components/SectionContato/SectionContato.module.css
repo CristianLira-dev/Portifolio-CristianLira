@@ -80,6 +80,19 @@
     outline: none;
 }
 
+.inputErro {
+    width: 100%;
+    padding: 14px 18px;
+    background: var(--cor-escuro-2);
+    border: 1px solid var(--cor-vermelho);
+    border-radius: 8px;
+    font-family: var(--light);
+    font-size: var(--f2);
+    color: var(--cor-branco);
+    transition: all 0.3s var(--ease-fluid);
+    outline: none;
+}
+
 .input::placeholder,
 .textarea::placeholder {
     color: var(--cor-escuro-5);
