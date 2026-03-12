@@ -32,6 +32,10 @@
     "assunto_label": "Asunto",
     "assunto_placeholder": "¿De qué te gustaría hablar?",
     "menssagem": "Mensaje",
+    "email_error_required": "El e-mail es obligatorio",
+    "email_error_validate": "Por favor, introduce un e-mail válido",
+    "assunto_error_required": "El asunto es obligatorio",
+    "mensagem_error_required": "El mensaje es obligatorio",
     "language": "es",
     "language_URL": "/langs/es.js",
     "button": "Enviar Mensaje"

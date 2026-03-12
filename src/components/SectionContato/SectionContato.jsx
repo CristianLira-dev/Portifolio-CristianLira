@@ -1,13 +1,15 @@
 import styles from "../SectionContato/SectionContato.module.css";
 import { Editor } from "@tinymce/tinymce-react";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
-
+import {useForm, Controller} from "react-hook-form";
 
 function SectionContato() {    
     const { t } = useTranslation();
-    const [texto, setTexto] = useState("")
+    const { register, handleSubmit, control, formState: {errors}} = useForm();
 
+  const onSubmit = (data) => {
+    console.log(data);
+  }
 
     return (
       <section id="contact" className={styles.SectionContato}>
@@ -36,8 +38,24 @@ function SectionContato() {
                   id="email"
                   className={styles.input}
                   placeholder={t("contact.email_placeholder")}
+                  {...register("email", {
+                    required: true, validate: (value) => {
+                      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                      return emailRegex.test(value) || "invalid";
+                  }})}
                 />
-                <p id="erro-email" className={styles.erro + " " + styles.hide}></p>
+                {errors?.email?.type === "required" && (
+                  <p id="erro-email" className={styles.erro}>
+                    {t("contact.email_error_required")}
+                  </p>
+                )}
+
+                {errors?.email?.type === "validate" && (
+                  <p id="erro-email" className={styles.erro}>
+                    {t("contact.email_error_validate")}
+                  </p>
+                )}
+
               </div>
 
               <div className={styles.campoWrapper}>
@@ -49,8 +67,11 @@ function SectionContato() {
                   id="assunto"
                   className={styles.input}
                   placeholder={t("contact.assunto_placeholder")}
+                  {...register("assunto", { required: true })}
                 />
-                <p id="erro-assunto" className={styles.erro + " " + styles.hide}></p>
+                {errors?.assunto?.type === "required" && (
+                <p id="erro-assunto" className={styles.erro}> {t("contact.assunto_error_required")} </p>
+                )}
               </div>
 
               <div className={styles.campoWrapper}>
@@ -58,14 +79,19 @@ function SectionContato() {
                   {t("contact.menssagem")}
                 </label>
                 <div className={styles.editorWrapper}>
-                  <Editor
-                    key={t("contact.language")}
-                    apiKey="h8krho8x5gu4wxlvavexdy4hb45bm5oq457o94fm0k4o6l07"
-                    onEditorChange={(novoTexo) => {
-                      setTexto(novoTexo);
-                    }}
-                    initialValue=""
-                    init={{
+                  <Controller
+                    name="mensagem"
+                    control={control}
+                    rules={{ required: true }}
+                    defaultValue=""
+                    render={({ field }) => (
+                      <Editor
+                        key={t("contact.language")}
+                        apiKey="h8krho8x5gu4wxlvavexdy4hb45bm5oq457o94fm0k4o6l07"
+                        value={field.value}
+                        onEditorChange={field.onChange}
+                        initialValue=""
+                        init={{
                       height: 300,
                       menubar: false,
                       branding: false,
@@ -90,15 +116,21 @@ function SectionContato() {
                       toolbar:
                         "undo redo | bold italic underline  | align lineheight | numlist bullist emoticons  image link",
                     }}
+                      />
+                    )}
                   />
                 </div>
-                <p id="erro-mensagem" className={styles.erro + " " + styles.hide}></p>
+                {errors?.mensagem?.type === "required" && (
+                  <p id="erro-mensagem" className={styles.erro}>
+                    {t("contact.mensagem_error_required")}
+                  </p>
+                )}
               </div>
 
               <div className={styles.containerButton}>
-                <button type="submit" className={styles.botaoEnviar}>
+                <a className={styles.botaoEnviar} onClick={() => handleSubmit(onSubmit)()}>
                   {t("contact.button")}
-                </button>
+                </a>
               </div>
             </form>
           </div>

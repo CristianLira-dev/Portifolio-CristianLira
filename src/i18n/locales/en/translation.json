@@ -32,6 +32,10 @@
     "assunto_label": "Subject",
     "assunto_placeholder": "What would you like to talk about?",
     "menssagem": "Message",
+    "email_error_required": "E-mail is required",
+    "email_error_validate": "Please enter a valid e-mail",
+    "assunto_error_required": "Subject is required",
+    "mensagem_error_required": "Message is required",
     "language": "",
     "language_URL": "",
     "button": "Send Message"
