@@ -3,17 +3,41 @@ import { Editor } from "@tinymce/tinymce-react";
 import { useTranslation } from "react-i18next";
 import { useForm, Controller } from "react-hook-form";
 import validator from "validator";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
+import ModalFeedback from "../ModalFeedback/ModalFeedback";
 
 function SectionContato() {    
     const { t } = useTranslation();
-    const { register, handleSubmit, control, formState: {errors}} = useForm();
+  const { register, handleSubmit, control, reset, formState: { errors } } = useForm();
+  const [status, setStatus] = useState(null);
 
-  const onSubmit = (data) => {
-    console.log(data);
-  }
+  const onSubmit = async (data) => {
+    setStatus("loading");
 
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          email: data.email,
+          assunto: data.assunto,
+          mensagem: data.mensagem,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      setStatus("success");
+      reset();
+    }catch (error) {
+      console.error("Erro ao enviar email:", error);
+      setStatus("error");
+      return;
+    }
+
+  };
     return (
       <section id="contact" className={styles.SectionContato}>
+        <ModalFeedback status={status} onClose={() => setStatus(null)} />
         <svg
           className={styles.svg}
           xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +64,9 @@ function SectionContato() {
                   className={errors?.email ? styles.inputErro : styles.input}
                   placeholder={t("contact.email_placeholder")}
                   {...register("email", {
-                    required: true, validate: (value) => validator.isEmail(value)})}
+                    required: true,
+                    validate: (value) => validator.isEmail(value),
+                  })}
                 />
                 {errors?.email?.type === "required" && (
                   <p id="erro-email" className={styles.erro}>
@@ -53,7 +79,6 @@ function SectionContato() {
                     {t("contact.email_error_validate")}
                   </p>
                 )}
-
               </div>
 
               <div className={styles.campoWrapper}>
@@ -68,7 +93,10 @@ function SectionContato() {
                   {...register("assunto", { required: true })}
                 />
                 {errors?.assunto?.type === "required" && (
-                <p id="erro-assunto" className={styles.erro}> {t("contact.assunto_error_required")} </p>
+                  <p id="erro-assunto" className={styles.erro}>
+                    {" "}
+                    {t("contact.assunto_error_required")}{" "}
+                  </p>
                 )}
               </div>
 
@@ -90,18 +118,18 @@ function SectionContato() {
                         onEditorChange={field.onChange}
                         initialValue=""
                         init={{
-                      height: 300,
-                      menubar: false,
-                      branding: false,
-                      statusbar: false,
+                          height: 300,
+                          menubar: false,
+                          branding: false,
+                          statusbar: false,
 
-                      // Tema do editor (skin)
-                      skin: "oxide-dark", // Tema escuro nativo do TinyMCE
-                      content_css: "dark", // CSS escuro para o conteúdo
-                      language: t("contact.language"), // O código do idioma
-                      language_url: t("contact.language_URL"), // O caminho onde você colou o arquivo (dentro da public)
-                      // Estilização do conteúdo interno
-                      content_style: `
+                          // Tema do editor (skin)
+                          skin: "oxide-dark", // Tema escuro nativo do TinyMCE
+                          content_css: "dark", // CSS escuro para o conteúdo
+                          language: t("contact.language"), // O código do idioma
+                          language_url: t("contact.language_URL"), // O caminho onde você colou o arquivo (dentro da public)
+                          // Estilização do conteúdo interno
+                          content_style: `
         body {
           color: #fafafa;
           background-color: #131519;
@@ -109,11 +137,11 @@ function SectionContato() {
         }
       `,
 
-                      plugins:
-                        "anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount",
-                      toolbar:
-                        "undo redo | bold italic underline  | align lineheight | numlist bullist emoticons  image link",
-                    }}
+                          plugins:
+                            "anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount",
+                          toolbar:
+                            "undo redo | bold italic underline  | align lineheight | numlist bullist emoticons  image link",
+                        }}
                       />
                     )}
                   />
@@ -126,8 +154,11 @@ function SectionContato() {
               </div>
 
               <div className={styles.containerButton}>
-                <a className={styles.botaoEnviar} onClick={() => handleSubmit(onSubmit)()}>
-                  {t("contact.button")}
+                <a
+                  className={styles.botaoEnviar}
+                  onClick={() => handleSubmit(onSubmit)()}
+                >
+                  {status === "loading" ? "Enviando..." : t("contact.button")}
                 </a>
               </div>
             </form>
