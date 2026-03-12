@@ -158,7 +158,7 @@ function SectionContato() {
                   className={styles.botaoEnviar}
                   onClick={() => handleSubmit(onSubmit)()}
                 >
-                  {status === "loading" ? "Enviando..." : t("contact.button")}
+                  {status === "loading" ? t("contact.loading") : t("contact.button")}
                 </a>
               </div>
             </form>

@@ -38,7 +38,15 @@
     "mensagem_error_required": "A mensagem é obrigatória",
     "language": "pt_BR",
     "language_URL": "/langs/pt_BR.js",
-    "button": "Enviar Mensagem"
+    "button": "Enviar Mensagem",
+    "loading": "Enviando..."
+  },
+  "modal_contato": {
+    "success_title": "Mensagem enviada!",
+    "success_message": "Obrigado por entrar em contato. Responderei o mais breve possível.",
+    "error_title": "Erro ao enviar",
+    "error_message": "Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde.",
+    "button": "Fechar"
   },
   "footer": {
     "title": "Desenvolvedor Front-End | UI/UX Designer",

@@ -1,8 +1,11 @@
 import styles from "./ModalFeedback.module.css";
+import { useTranslation } from "react-i18next";
 
 function ModalFeedback({ status, onClose }) {
   if (!status || status === "loading") return null;
-  
+
+      const { t } = useTranslation();
+
   const isSuccess = status === "success";
 
   return (
@@ -45,17 +48,17 @@ function ModalFeedback({ status, onClose }) {
 
         <div className={styles.content}>
           <h3 className={styles.titulo}>
-            {isSuccess ? "Mensagem enviada!" : "Erro ao enviar"}
+            {isSuccess ? t("modal_contato.success_title") : t("modal_contato.error_title")}
           </h3>
           <p className={styles.descricao}>
             {isSuccess
-              ? "Sua mensagem foi enviada com sucesso. Entrarei em contato em breve."
-              : "Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde."}
+              ? t("modal_contato.success_message")
+              : t("modal_contato.error_message")}
           </p>
         </div>
 
         <button className={styles.botaoFechar} onClick={onClose}>
-          Fechar
+          {t("modal_contato.button")}
         </button>
 
         <div

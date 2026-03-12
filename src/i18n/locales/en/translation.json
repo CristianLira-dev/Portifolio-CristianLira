@@ -38,7 +38,15 @@
     "mensagem_error_required": "Message is required",
     "language": "",
     "language_URL": "",
-    "button": "Send Message"
+    "button": "Send Message",
+    "loading": "Sending..."
+  },
+  "modal_contato": {
+    "success_title": "Message sent!",
+    "success_message": "Thank you for getting in touch. I will get back to you as soon as possible.",
+    "error_title": "Error sending",
+    "error_message": "An error occurred while sending your message. Please try again later.",
+    "button": "Close"
   },
   "footer": {
     "title": "Front-End Developer | UI/UX Designer",
