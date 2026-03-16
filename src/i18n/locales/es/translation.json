@@ -75,6 +75,8 @@
     "title": "Mis Proyectos",
     "technologies": "Tecnologías",
     "view_project": "Ver Proyecto",
-    "code": "Código"
+    "code": "Código",
+    "see_more": "Ver Más",
+    "see_less": "Ver Menos"
   }
 }

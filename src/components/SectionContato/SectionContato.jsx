@@ -4,13 +4,20 @@ import { useTranslation } from "react-i18next";
 import { useForm, Controller } from "react-hook-form";
 import validator from "validator";
 import emailjs from "@emailjs/browser";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ModalFeedback from "../ModalFeedback/ModalFeedback";
 
 function SectionContato() {    
     const { t } = useTranslation();
   const { register, handleSubmit, control, reset, formState: { errors } } = useForm();
   const [status, setStatus] = useState(null);
+
+    useEffect(() => {
+      fetch("/api/email")
+        .then((resposta) => resposta.json())
+        .then((dados) => console.log(dados.email))
+        .catch((erro) => console.error("Erro ao buscar dados:", erro));
+    }, []);
 
   const onSubmit = async (data) => {
     setStatus("loading");

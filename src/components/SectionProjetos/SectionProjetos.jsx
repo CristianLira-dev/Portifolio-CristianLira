@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./SectionProjetos.module.css";
 import {
@@ -27,6 +27,7 @@ import projectsEs from "../../assets/data/projects.es.json";
 import pinia from "../../assets/images/pinia.png";  
 
 function SectionProjetos() {
+  const [showHidden, setShowHidden] = useState(false);
   const { t, i18n } = useTranslation();
 
   const iconMap = {
@@ -59,7 +60,10 @@ function SectionProjetos() {
     <section className={styles.projetos} id="projects">
       <h2>{t("projects.title")}</h2>
       {projectsData.projects.map((project) => (
-        <div key={project.id} className={styles.layout}>
+        <div 
+          key={project.id} 
+          className={`${styles.layout} ${project.id >= 5 && !showHidden ? styles.hide : ''}`}
+        >
           <div className={styles.image}>
             <img src={project.img} alt={project.title} />
           </div>
@@ -73,7 +77,10 @@ function SectionProjetos() {
               <h3>{t("projects.technologies")}:</h3>
               <div className={styles.techtags}>
                 {project.tecnologias.map((tech, index) => (
-                  <span key={index} className={`${styles.tecnologia} ${styles[tech]}`}>
+                  <span
+                    key={index}
+                    className={`${styles.tecnologia} ${styles[tech]}`}
+                  >
                     {iconMap[tech]}
                     <p>{tech}</p>
                   </span>
@@ -97,6 +104,14 @@ function SectionProjetos() {
           </div>
         </div>
       ))}
+      <div className={styles.VerMais}>
+        <a 
+          className={styles.Button}
+          onClick={() => setShowHidden(!showHidden)}
+        >
+          <span>{showHidden ? t("projects.see_less") : t("projects.see_more")}</span>
+        </a>
+      </div>
     </section>
   );
 }

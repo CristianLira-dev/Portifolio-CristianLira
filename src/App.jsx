@@ -13,19 +13,20 @@ import { useState } from 'react';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
+
   return (
-  <main>
-                {isLoading && <Loading onComplete={() => setIsLoading(false)} />}            
-                  <Header />
-                  <SectionHero />
-                  <Divisor />
-                  <SectionSobre />
-                  <SectionHabilidades />
-                  <SectionProjetos />
-                  <SectionContato />
-                  <Footer />
+    <main>
+      {isLoading && <Loading onComplete={() => setIsLoading(false)} />}
+      <Header />
+      <SectionHero />
+      <Divisor />
+      <SectionSobre />
+      <SectionHabilidades />
+      <SectionProjetos />
+      <SectionContato />
+      <Footer />
     </main>
-  )
+  );
 }
 
 export default App
