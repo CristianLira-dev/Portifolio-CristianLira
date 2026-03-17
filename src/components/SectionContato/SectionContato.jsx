@@ -11,12 +11,16 @@ function SectionContato() {
     const { t } = useTranslation();
   const { register, handleSubmit, control, reset, formState: { errors } } = useForm();
   const [status, setStatus] = useState(null);
-
-    useEffect(() => {
-      fetch("/api/email")
-        .then((resposta) => resposta.json())
-        .then((dados) => console.log(dados.email))
-        .catch((erro) => console.error("Erro ao buscar dados:", erro));
+  
+  
+  useEffect(() => {
+      const apiUrl = import.meta.env.VITE_API_URL || "";
+    fetch(`${apiUrl}/api/email`, {
+          method: "GET"
+        })
+          .then((resposta) => resposta.json())
+          .then((dados) => console.log(dados.email))
+          .catch((erro) => console.error("Erro ao buscar dados:", erro));
     }, []);
 
   const onSubmit = async (data) => {
