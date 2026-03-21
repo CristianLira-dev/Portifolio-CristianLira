@@ -3,9 +3,10 @@ import express from "express";
 import cors from "cors";
 import validator from "validator";
 import process from "process";
+import rateLimit from "express-rate-limit";
 
 const app = express();
-
+app.set("trust proxy", 1);
 app.use(cors());
 app.use(express.json());
 
@@ -19,6 +20,8 @@ const mensagens = {
     assunto_required: "O assunto é obrigatório.",
     mensagem_required: "A mensagem é obrigatória.",
     success: "Dados validados com sucesso!",
+    rate_limit:
+      "Limite de envios atingido. Por favor, tente novamente mais tarde.",
   },
   en: {
     email_required: "E-mail is required.",
@@ -26,6 +29,7 @@ const mensagens = {
     assunto_required: "Subject is required.",
     mensagem_required: "Message is required.",
     success: "Data validated successfully!",
+    rate_limit: "Send limit reached. Please try again later.",
   },
   es: {
     email_required: "El e-mail es obligatorio.",
@@ -33,6 +37,7 @@ const mensagens = {
     assunto_required: "El asunto es obligatorio.",
     mensagem_required: "El mensaje es obligatorio.",
     success: "¡Datos validados con éxito!",
+    rate_limit: "Límite de envíos alcanzado. Inténtalo de nuevo más tarde.",
   },
 };
 
@@ -52,6 +57,19 @@ function detectarIdioma(req) {
   return "en";
 }
 
+const limitadorDeEmails = rateLimit({
+  windowMs: 60 * 60 * 1000, // 1 hora em milissegundos
+  max: 3, // Máximo de 3 requisições por IP
+  standardHeaders: true,
+  legacyHeaders: false,
+  // Função que dispara quando o limite é atingido
+  handler: (req, res) => {
+    const idioma = detectarIdioma(req);
+    // Retorna erro 429 (Too Many Requests) com a mensagem traduzida
+    return res.status(429).json({ error: mensagens[idioma].rate_limit });
+  },
+});
+
 // Rota GET de teste
 app.get("/api/email", (req, res) => {
   res.json({
@@ -60,7 +78,7 @@ app.get("/api/email", (req, res) => {
 });
 
 // Rota POST de VALIDAÇÃO
-app.post("/api/email", (req, res) => {
+app.post("/api/email", limitadorDeEmails, (req, res) => {
   const { email, assunto, mensagem } = req.body;
   const idioma = detectarIdioma(req);
   const msg = mensagens[idioma];
@@ -80,7 +98,7 @@ app.post("/api/email", (req, res) => {
     return res.status(400).json({ error: msg.email_invalid });
   }
 
-   if (emailTrimmed === "cristianfilho2008@outlook.com") {
+  if (emailTrimmed === "cristianfilho2008@outlook.com") {
     return res.status(400).json({ error: msg.email_invalid });
   }
 
