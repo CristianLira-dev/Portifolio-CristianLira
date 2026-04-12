@@ -212,9 +212,6 @@ function Footer() {
           <p className={styles.copyright}>© {anoAtual} Cristian Lira</p>
         </div>
       </div>
-
-      <div className={styles.backgroundEffect}></div>
-      <div className={styles.backgroundGlow}></div>
     </footer>
   );
 }
