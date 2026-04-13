@@ -31,9 +31,9 @@
     justify-content: center;
     text-align: center;
     width: 100%;
-    padding: 40px 80px;
+    padding: 50px 80px 10px 80px;
     gap: 20px;
-    background: linear-gradient(0deg, #121212, #1a1a1a);
+    background: linear-gradient(0deg, #0b0b0b, #222222);
 }
 
 .titulo h2 {
