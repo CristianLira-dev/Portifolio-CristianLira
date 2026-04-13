@@ -19,7 +19,7 @@ function SectionHero() {
       splineInstance.current = spline;
 
       const sceneUrl =
-        "https://draft.spline.design/pPIUxkU1Oox4XAya/scene.splinecode";
+        "https://draft.spline.design/Eg0WiB1TgjHlLzlN/scene.splinecode";
 
       spline
         .load(sceneUrl)
