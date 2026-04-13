@@ -112,6 +112,29 @@
       ]
     },
     {
+      "id": "tools-devops",
+      "title": "Infraestructura y Deploy",
+      "description": "Optimización del flujo de trabajo y despliegue",
+      "gradient": "linear-gradient(60deg, #1a1a1a 60%, #1e3a5f)",
+      "icon": "DevOps",
+      "iconColor": "#3b82f6",
+      "size": "half",
+      "skills": [
+        {
+          "name": "Git",
+          "icon": null
+        },
+        {
+          "name": "Vite",
+          "icon": null
+        },
+        {
+          "name": "Vercel (Deploy)",
+          "icon": null
+        }
+      ]
+    },
+    {
       "id": "backend-integration",
       "title": "Back-End, Datos e Integración",
       "description": "Conexión entre Front-end y Back-end",
@@ -133,30 +156,15 @@
           "icon": null
         },
         {
+          "name": "Node.js",
+          "icon": null
+        },
+        {
+          "name": "Python",
+          "icon": null
+        },
+        {
           "name": "Axios",
-          "icon": null
-        }
-      ]
-    },
-    {
-      "id": "tools-devops",
-      "title": "Infraestructura y Deploy",
-      "description": "Optimización del flujo de trabajo y despliegue",
-      "gradient": "linear-gradient(60deg, #1a1a1a 60%, #1e3a5f)",
-      "icon": "DevOps",
-      "iconColor": "#3b82f6",
-      "size": "half",
-      "skills": [
-        {
-          "name": "Git",
-          "icon": null
-        },
-        {
-          "name": "Vite",
-          "icon": null
-        },
-        {
-          "name": "Vercel (Deploy)",
           "icon": null
         }
       ]
