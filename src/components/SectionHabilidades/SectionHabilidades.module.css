@@ -313,6 +313,14 @@
     color: #5A29E4;
 }
 
+.skillIcon.nodejs {
+    color: #5FA04E;
+}
+
+.skillIcon.python {
+    color: #3776AB;
+}
+
 .skillIcon.git {
     color: #F05032;
 }

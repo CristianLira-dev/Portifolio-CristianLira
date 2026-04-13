@@ -37,6 +37,8 @@ import {
   FaGlobe,
   FaMedal,
   FaLayerGroup,
+  FaNodeJs,
+  FaPython,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -70,6 +72,8 @@ function SectionHabilidades() {
     MySQL: { icon: <SiMysql />, class: "mysql" },
     "API REST": { icon: <TbApi />, class: "api" },
     Axios: { icon: <TbApi />, class: "axios" },
+    "Node.js": { icon: <FaNodeJs />, class: "nodejs" },
+    Python: { icon: <FaPython />, class: "python" },
     Git: { icon: <FaGitAlt />, class: "git" },
     Vite: { icon: <img src={vite} alt="Vite" />, class: "vite" },
     "Vercel (Deploy)": { icon: <img src={vercel} alt="Vercel" />, class: "vercel" },
