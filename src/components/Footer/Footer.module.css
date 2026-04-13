@@ -184,6 +184,7 @@
     padding: 0;
     margin: 0;
     display: flex;
+    align-items: start;
     flex-direction: column;
     gap: 10px;
 }
@@ -201,7 +202,6 @@
     transition: all var(--ease-soft) 0.3s;
     display: inline-block;
     position: relative;
-    padding-left: 20px;
     font-family: var(--light);
 }
 
@@ -231,6 +231,7 @@
     padding: 0;
     margin: 0;
     display: flex;
+    align-items: start;
     flex-direction: column;
     gap: 18px;
 }
@@ -423,33 +424,6 @@
     justify-content: center;
     gap: 8px;
     font-family: var(--light);
-}
-
-
-/* Efeitos de fundo decorativos */
-.backgroundEffect {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 1;
-    animation: breathe 10s ease-in-out infinite;
-}
-
-.backgroundGlow {
-    position: absolute;
-    top: 30%;
-    right: 10%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.06) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 1;
-    animation: breathe 12s ease-in-out infinite reverse;
 }
 
 @keyframes breathe {

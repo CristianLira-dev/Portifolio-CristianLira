@@ -104,14 +104,14 @@ function SectionProjetos() {
           </div>
         </div>
       ))}
-      {/* <div className={styles.VerMais}>
+      <div className={styles.VerMais}>
         <a 
           className={styles.Button}
           onClick={() => setShowHidden(!showHidden)}
         >
           <span>{showHidden ? t("projects.see_less") : t("projects.see_more")}</span>
         </a>
-      </div> */}
+      </div>
     </section>
   );
 }
