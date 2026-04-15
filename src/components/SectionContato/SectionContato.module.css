@@ -80,6 +80,19 @@
     outline: none;
 }
 
+.inputMensagem {
+    width: 100%;
+    padding: 24px 18px;
+    background: var(--cor-escuro-2);
+    border: 2px solid var(--cor-escuro-4);
+    border-radius: 8px;
+    font-family: var(--light);
+    font-size: var(--f2);
+    color: var(--cor-branco);
+    transition: all 0.3s var(--ease-fluid);
+    outline: none;
+}
+
 .inputErro {
     width: 100%;
     padding: 14px 18px;
@@ -94,12 +107,14 @@
 }
 
 .input::placeholder,
-.textarea::placeholder {
+.textarea::placeholder,
+.inputMensagem::placeholder {
     color: var(--cor-escuro-5);
 }
 
 .input:focus,
-.textarea:focus {
+.textarea:focus,
+.inputMensagem:focus {
     border-color: var(--cor-azul-claro);
     background: var(--cor-escuro-1);
     box-shadow: 0 0 0 3px rgba(51, 160, 255, 0.1);
