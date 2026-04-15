@@ -1,7 +1,6 @@
 import styles from "../SectionContato/SectionContato.module.css";
-import { Editor } from "@tinymce/tinymce-react";
 import { useTranslation } from "react-i18next";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import validator from "validator";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
@@ -12,7 +11,6 @@ function SectionContato() {
   const {
     register,
     handleSubmit,
-    control,
     reset,
     formState: { errors },
   } = useForm();
@@ -145,54 +143,15 @@ function SectionContato() {
               <label htmlFor="mensagem" className={styles.label}>
                 {t("contact.menssagem")}
               </label>
-              <div className={styles.editorWrapper}>
-                <Controller
-                  name="mensagem"
-                  control={control}
-                  rules={{
-                    validate: (value) => {
-                      // Remove todas as tags HTML e espaços do TinyMCE para ver se há texto real
-                      const textoLimpo = (value || "")
-                        .replace(/<[^>]*>?/gm, "")
-                        .replace(/&nbsp;/g, "")
-                        .trim();
-
-                      return textoLimpo.length > 0;
-                    },
-                  }}
-                  defaultValue=""
-                  render={({ field }) => (
-                    <Editor
-                      key={t("contact.language")}
-                      apiKey="h8krho8x5gu4wxlvavexdy4hb45bm5oq457o94fm0k4o6l07"
-                      value={field.value}
-                      onEditorChange={field.onChange}
-                      initialValue=""
-                      init={{
-                        height: 300,
-                        menubar: false,
-                        branding: false,
-                        statusbar: false,
-                        skin: "oxide-dark",
-                        content_css: "dark",
-                        language: t("contact.language"),
-                        language_url: t("contact.language_URL"),
-                        content_style: `
-                          body {
-                            color: #fafafa;
-                            background-color: #131519;
-                            line-height: 1.5;
-                          }
-                        `,
-                        plugins:
-                          "anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount",
-                        toolbar:
-                          "undo redo | bold italic underline | align lineheight | numlist bullist emoticons image link",
-                      }}
-                    />
-                  )}
-                />
-              </div>
+              <input
+                type="text"
+                id="mensagem"
+                className={errors?.mensagem ? styles.inputErro : styles.inputMensagem}
+                placeholder="Ex: Gostaria de conversar com você!"
+                {...register("mensagem", {
+                  validate: (value) => value?.trim().length > 0,
+                })}
+              />
               {errors?.mensagem?.type === "validate" && (
                 <p id="erro-mensagem" className={styles.erro}>
                   {t("contact.mensagem_error_required")}
