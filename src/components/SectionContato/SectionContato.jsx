@@ -146,7 +146,7 @@ function SectionContato() {
               <input
                 type="text"
                 id="mensagem"
-                className={errors?.mensagem ? styles.inputErro : styles.inputMensagem}
+                className={errors?.mensagem ? styles.inputErroMensagem : styles.inputMensagem}
                 placeholder="Ex: Gostaria de conversar com você!"
                 {...register("mensagem", {
                   validate: (value) => value?.trim().length > 0,

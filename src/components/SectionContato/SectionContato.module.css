@@ -82,7 +82,7 @@
 
 .inputMensagem {
     width: 100%;
-    padding: 24px 18px;
+    padding: 32px 18px;
     background: var(--cor-escuro-2);
     border: 2px solid var(--cor-escuro-4);
     border-radius: 8px;
@@ -96,6 +96,18 @@
 .inputErro {
     width: 100%;
     padding: 14px 18px;
+    background: var(--cor-escuro-2);
+    border: 1px solid var(--cor-vermelho);
+    border-radius: 8px;
+    font-family: var(--light);
+    font-size: var(--f2);
+    color: var(--cor-branco);
+    transition: all 0.3s var(--ease-fluid);
+    outline: none;
+}
+.inputErroMensagem {
+    width: 100%;
+    padding: 32px 18px;
     background: var(--cor-escuro-2);
     border: 1px solid var(--cor-vermelho);
     border-radius: 8px;
